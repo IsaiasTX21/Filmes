@@ -6,9 +6,6 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import MenuIcon from '@mui/icons-material/Menu';
 import Dropdown from 'react-bootstrap/Dropdown';
 
-
-
-
 function HEADER() {
   
   const [show, setShow] = useState(false);
@@ -60,10 +57,6 @@ function HEADER() {
     navigate(`/Genres/27`)
   }
 
-
-
-
-
   function inputchange(e) {
     setnamemovie(e.target.value)
     console.log(e.target.value)
@@ -95,13 +88,13 @@ function HEADER() {
       <img width="60" height="40" style={{right:"10%",position:"relative"}}  src="https://img.icons8.com/?size=100&id=0A7EJpuEDaux&format=png&color=ff0000"/>
         </li>
         <li className="nav-item">
-          <a onClick={popular}  className="nav-link text-white  me-1"  >POPULAR </a>
+          <a onClick={popular}  className="nav-link text-white me-1" >POPULAR </a>
         </li>
         <li className="nav-item">
-          <a onClick={ranted} className="nav-link text-white  me-1 " >TOP RATED</a>
+          <a onClick={ranted}   className="nav-link text-white me-1 ">TOP RATED</a>
         </li>
         <li className="nav-item">
-          <a onClick={upcoming} className="nav-link text-white   me-1" >UP COMING</a>
+          <a onClick={upcoming} className="nav-link text-white me-1" >UP COMING</a>
         </li>
       </ul>
     </div>
@@ -122,43 +115,43 @@ function HEADER() {
      
        
         <li className="nav-item">
-          <a onClick={popular} className="nav-link text-white me-4" >TOP RATED</a>
+          <a href='/' className="nav-link text-white me-4" >TOP RATED</a>
         </li>
         <li className="nav-item">
-          <a onClick={ranted} className="nav-link text-white me-4" >RATED</a>
+          <a href='/TopRated' className="nav-link text-white me-4" >RATED</a>
         </li>
         <li className="nav-item">
-          <a onClick={upcoming} className="nav-link text-white me-4" >UP COMING</a>
+          <a href="/Upcoming" className="nav-link text-white me-4" >UP COMING</a>
         </li>
         <li className="nav-item">
-          <a onClick={action} className="nav-link text-white me-4" >ACTION</a>
+          <a href='/Genres/28' className="nav-link text-white me-4" >ACTION</a>
         </li>
         <li className="nav-item">
-          <a onClick={crime} className="nav-link text-white me-4" >CRIME</a>
+          <a href='/Genres/80' className="nav-link text-white me-4" >CRIME</a>
         </li>
         <li className="nav-item">
-          <a onClick={animation} className="nav-link text-white me-4" >ANIMATION</a>
+          <a href="/Genres/16" className="nav-link text-white me-4" >ANIMATION</a>
         </li>
         <li className="nav-item">
-          <a onClick={adventure} className="nav-link text-white me-4" >ADVENTURE</a>
+          <a href="/Genres/12" className="nav-link text-white me-4" >ADVENTURE</a>
         </li>
         <li className="nav-item">
-          <a onClick={comedy} className="nav-link text-white me-4" >COMEDY</a>
+          <a href="/Genres/35" className="nav-link text-white me-4" >COMEDY</a>
         </li>
         <li className="nav-item">
-          <a onClick={documentary} className="nav-link text-white me-4" >DOCUMENTARY</a>
+          <a href="/Genres/99" className="nav-link text-white me-4" >DOCUMENTARY</a>
         </li>
         <li className="nav-item">
-          <a onClick={drama} className="nav-link text-white me-4" >DRAMA</a>
+          <a href="/Genres/18" className="nav-link text-white me-4" >DRAMA</a>
         </li>
         <li className="nav-item">
-          <a onClick={family} className="nav-link text-white me-4" >FAMILY</a>
+          <a href="/Genres/14" className="nav-link text-white me-4" >FAMILY</a>
         </li>
         <li className="nav-item">
-          <a onClick={history} className="nav-link text-white me-4" >HISTORY</a>
+          <a href="/Genres/16" className="nav-link text-white me-4" >HISTORY</a>
         </li>
         <li className="nav-item">
-          <a onClick={horror} className="nav-link text-white me-4" >HORROR</a>
+          <a href="/Genres/27" className="nav-link text-white me-4" >HORROR</a>
         </li>
        
       </ul>
