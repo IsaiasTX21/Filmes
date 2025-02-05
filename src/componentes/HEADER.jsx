@@ -19,7 +19,6 @@ function HEADER() {
   function popular()  {
     navigate(`/`)
   }
-
   function ranted()  {
     navigate(`/TopRated`)
   }
@@ -103,11 +102,11 @@ function HEADER() {
              <div className='d-flex'>
          
 
-      <Offcanvas   show={show} style={{width: '50%', background: " rgb(0, 0, 0)" }} onHide={handleClose}>
+      <Offcanvas  show={show} style={{width: '50%', background: " rgb(0, 0, 0)" }} onHide={handleClose}>
        
-        <Offcanvas.Header  className='button ' style={{width: '80%', background: " rgb(161, 12, 12)",color:"red",left:"5%" }}  closeButton  >
+        <Offcanvas.Header  className='button d-flex text-center ' style={{width: '90%', background: " rgb(161, 12, 12)",color:"red",left:"5%" }}  closeButton  >
  
-          <Offcanvas.Title className='text-white'>Menu</Offcanvas.Title>
+          <Offcanvas.Title  className='text-white m-auto d-flex'>Responsive</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body className='text-center'>
           
@@ -115,43 +114,43 @@ function HEADER() {
      
        
         <li className="nav-item">
-          <a href='/' className="nav-link text-white me-4" >TOP RATED</a>
+          <a onClick={popular} className="nav-link text-white me-4" >POPULAR</a>
         </li>
         <li className="nav-item">
-          <a href='/TopRated' className="nav-link text-white me-4" >RATED</a>
+          <a  onClick={ranted} className="nav-link text-white me-4" >TOP RATED</a>
         </li>
         <li className="nav-item">
-          <a href="/Upcoming" className="nav-link text-white me-4" >UP COMING</a>
+          <a onClick={upcoming} className="nav-link text-white me-4" >UP COMING</a>
         </li>
         <li className="nav-item">
-          <a href='/Genres/28' className="nav-link text-white me-4" >ACTION</a>
+          <a onClick={action} className="nav-link text-white me-4" >ACTION</a>
         </li>
         <li className="nav-item">
-          <a href='/Genres/80' className="nav-link text-white me-4" >CRIME</a>
+          <a onClick={crime} className="nav-link text-white me-4" >CRIME</a>
         </li>
         <li className="nav-item">
-          <a href="/Genres/16" className="nav-link text-white me-4" >ANIMATION</a>
+          <a onClick={animation} className="nav-link text-white me-4" >ANIMATION</a>
         </li>
         <li className="nav-item">
-          <a href="/Genres/12" className="nav-link text-white me-4" >ADVENTURE</a>
+          <a onClick={adventure} className="nav-link text-white me-4" >ADVENTURE</a>
         </li>
         <li className="nav-item">
-          <a href="/Genres/35" className="nav-link text-white me-4" >COMEDY</a>
+          <a onClick={comedy} className="nav-link text-white me-4" >COMEDY</a>
         </li>
         <li className="nav-item">
-          <a href="/Genres/99" className="nav-link text-white me-4" >DOCUMENTARY</a>
+          <a onClick={documentary} className="nav-link text-white me-4">DOCUMENTARY</a>
         </li>
         <li className="nav-item">
-          <a href="/Genres/18" className="nav-link text-white me-4" >DRAMA</a>
+          <a onClick={drama} className="nav-link text-white me-4">DRAMA</a>
         </li>
         <li className="nav-item">
-          <a href="/Genres/14" className="nav-link text-white me-4" >FAMILY</a>
+          <a onClick={family} className="nav-link text-white me-4">FAMILY</a>
         </li>
         <li className="nav-item">
-          <a href="/Genres/16" className="nav-link text-white me-4" >HISTORY</a>
+          <a onClick={history} className="nav-link text-white me-4" >HISTORY</a>
         </li>
         <li className="nav-item">
-          <a href="/Genres/27" className="nav-link text-white me-4" >HORROR</a>
+          <a onClick={horror} className="nav-link text-white me-4" >HORROR</a>
         </li>
        
       </ul>
