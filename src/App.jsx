@@ -9,14 +9,10 @@ import UPCOMING from './componentes/UPCAMING';
 import { Dimension } from './componentes/DIMENSION';
 import GENRES from './componentes/GENRES';
 
-
-
 function App() {
-
 
   return (
 <>
-
 <BrowserRouter>
 <Routes>
 
