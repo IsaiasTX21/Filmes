@@ -35,9 +35,9 @@ function HEADER() {
   return (
     <>
 
-      <header>
-        <nav className='navbar  justify-content-center sticky-top navbar-expand-md list-unstyled  '>
-          <nav className="navbar ">
+      <header className='  sticky-top'>
+        <nav className='navbar justify-content-center  navbar-expand-md list-unstyled  '>
+          <nav className="navbar   ">
             <div className="collapse navbar-collapse  " >
               <ul className="navbar-nav">
 
