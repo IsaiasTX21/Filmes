@@ -68,7 +68,7 @@ input{
 }
 
 @media screen and (width > 992px){
-  img:hover{
+  .movie:hover{
     transform: translateY(-50px);
       transition: transform 0.4s
     

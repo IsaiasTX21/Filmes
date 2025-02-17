@@ -30,7 +30,7 @@ function TOPRATED() {
               <div key={element.id} className=" col-md-6 col-lg-4 col-xl-3 ">
                 {/* Cada card */}
                 <div style={{backgroundColor:"rgb(0, 0, 0)"}} className="card mt-5 img-fluid justify-content-center text-center anime">
-                <Link to={`/Details/${element.id}`}>  <img src={`https://image.tmdb.org/t/p/w500${element.poster_path}`} style={{  height:"450px "}} className="card-img-top im-g-fluid" alt="" /></Link>
+                <Link to={`/Details/${element.id}`}>  <img src={`https://image.tmdb.org/t/p/w500${element.poster_path}`} style={{  height:"450px "}} className="movie card-img-top im-g-fluid" alt="" /></Link>
                   <div className="card-body card-space ">
                   <h5 className="card-title text-white">{element.title}</h5>
                   <p className="card-text position-relative"> </p>
