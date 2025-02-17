@@ -42,7 +42,7 @@ function HEADER() {
               <ul className="navbar-nav">
 
                 <li className="nav-item ">
-                  <img width="60" height="40" style={{ right: "10%", position: "relative" }} src="https://img.icons8.com/?size=100&id=0A7EJpuEDaux&format=png&color=ff0000" />
+                 <img src='https://i.ibb.co/dwVLK96k/icons8-rolo-de-filme-50.png'></img>
                 </li>
                 <li className="nav-item">
                   <a onClick={() => navigate("/")} className="nav-link text-white me-1" >POPULAR </a>
@@ -122,7 +122,7 @@ function HEADER() {
             </Button>
 
             <Dropdown>
-              <Dropdown.Toggle style={{ "backgroundColor": " rgb(31, 28, 28)" }} id="dropdown-basic" className='me-2 text-light  '>
+              <Dropdown.Toggle variant=''  id="dropdown-basic" className='me-2 text-bg-danger   '>
                 Category
               </Dropdown.Toggle>
 
@@ -141,7 +141,7 @@ function HEADER() {
             </Dropdown>
 
             <input className='form-control rounded-0 border-0  ' required onChange={inputchange}></input>
-            <button className='btn btn-outline-danger  text-center rounded-0' onClick={searchmovie} >Search</button>
+            <button className='btn btn-danger  text-center rounded-0' onClick={searchmovie} >Search</button>
 
           </div>
 
