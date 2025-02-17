@@ -65,14 +65,24 @@ cursor: pointer;
 input{
   background-color: rgb(31, 30, 30) !important;
   color: aliceblue !important;
-
-
-
-
 }
 
+@media screen and (width > 992px){
+  img:hover{
+    transform: translateY(-50px);
+      transition: transform 0.4s
+    
+    }
+}
 
-
+@media screen and (width < 768px){
+  .navmob{
+    width: 100% !important;
+  } 
+  input{
+  width: 100% !important;
+  }
+}
 
 
 

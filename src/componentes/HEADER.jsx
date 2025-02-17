@@ -35,7 +35,7 @@ function HEADER() {
   return (
     <>
 
-      <header className='  sticky-top'>
+      <header className=' m-0 p-0 sticky-top'>
         <nav className='navbar justify-content-center  navbar-expand-md list-unstyled  '>
           <nav className="navbar   ">
             <div className="collapse navbar-collapse  " >
@@ -57,7 +57,7 @@ function HEADER() {
             </div>
           </nav>
 
-          <div className='d-flex'>
+          <div className='d-flex p-0 navmob  m-0 '>
 
 
             <Offcanvas show={show} style={{ width: '50%', background: " rgb(0, 0, 0)" }} onHide={handleClose}>
@@ -68,7 +68,7 @@ function HEADER() {
               </Offcanvas.Header>
               <Offcanvas.Body className='text-center'>
 
-                <ul className="navbar-nav ">
+                <ul className="navbar-nav p-0 m-0  ">
 
 
                   <li className="nav-item">
@@ -122,7 +122,7 @@ function HEADER() {
             </Button>
 
             <Dropdown>
-              <Dropdown.Toggle variant='' style={{ "backgroundColor": " rgb(31, 28, 28)" }} id="dropdown-basic" className='me-2 text-light  '>
+              <Dropdown.Toggle style={{ "backgroundColor": " rgb(31, 28, 28)" }} id="dropdown-basic" className='me-2 text-light  '>
                 Category
               </Dropdown.Toggle>
 
@@ -140,8 +140,8 @@ function HEADER() {
               </Dropdown.Menu>
             </Dropdown>
 
-            <input className='form-control rounded-0 border-0 ' required onChange={inputchange}></input>
-            <button className='btn btn-outline-danger ms-1 text-center rounded-0' onClick={searchmovie} >Search</button>
+            <input className='form-control rounded-0 border-0  ' required onChange={inputchange}></input>
+            <button className='btn btn-outline-danger  text-center rounded-0' onClick={searchmovie} >Search</button>
 
           </div>
 
