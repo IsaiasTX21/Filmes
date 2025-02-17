@@ -117,7 +117,7 @@ function HEADER() {
             </Offcanvas>
 
 
-            <Button variant=" btn btn-outline-danger  text-center rounded-0 Menu " className='d-md-none ' onClick={handleShow}>
+            <Button variant=" btn btn-danger  text-center rounded-0 Menu " className='d-md-none ' onClick={handleShow}>
               <MenuIcon className='d-md-none' onClick={handleShow} />
             </Button>
 
