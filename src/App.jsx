@@ -6,7 +6,7 @@ import SEARCH from './componentes/SEARCH';
 import DETAILS from './componentes/INFORMATION';
 import TOPRATED from './componentes/TOPRATED';
 import UPCOMING from './componentes/UPCAMING';
-import { Dimension } from './componentes/DIMENSION';
+
 import GENRES from './componentes/GENRES';
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
   <Route path='Search/:id' Component={SEARCH} />
   <Route path='TopRated' Component={TOPRATED} />
   <Route path='Upcoming' Component={UPCOMING} />
-  <Route path="Details/:id" element={<Dimension><DETAILS /></Dimension>} />
+  <Route path="Details/:id" element={<DETAILS />} />
 </Routes>
 </BrowserRouter>
 </>

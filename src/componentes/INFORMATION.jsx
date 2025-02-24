@@ -2,19 +2,13 @@ import React, { useEffect, useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { Rating } from '@mui/material';
-import { MeuContexto } from './DIMENSION'; // Importando o contexto
+
 
 function DETAILS() {
-  // Usando o contexto para acessar o valor de "width"
-  const height = useContext(MeuContexto);
-  const [view, setview] = useState("100%")
 
 
-function heigh (){
-  
- if(height > 520) {
-  setview("100vh")
-}}
+
+
 
 
 
@@ -34,7 +28,7 @@ function heigh (){
   useEffect(() => {
   
     api();
-    heigh()
+ 
   },[]);
 
   const renderCountries = () => {
@@ -65,7 +59,7 @@ function heigh (){
 
    
 
-      <div className='d-flex  ' style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movies.backdrop_path})`, backgroundRepeat: "no-repeat", backgroundSize: "cover",backgroundPosition:"center", "height":view }}>
+      <div className='d-flex  ' style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${movies.backdrop_path})`, backgroundRepeat: "no-repeat", backgroundSize: "cover",backgroundPosition:"center", minHeight:"100dvh" }}>
         <div className='container align-content-center mb-5 ' >
           <div className="row det justify-content-center  " >
       
@@ -73,7 +67,7 @@ function heigh (){
             
               <div className="card-body text-center " >
       
-                <h5 className="card-title" style={{color:"red"}}>{movies.title}</h5>
+                <h5 className="card-title" style={{color:"#f74242"}}>{movies.title}</h5>
                 <p className="card-text text-white" >{movies.overview}</p>
                 <Rating
                   name="half-rating-read"
@@ -81,8 +75,8 @@ function heigh (){
                   readOnly
                 />
                 
-                <p> <span style={{color:"red"}}> Country </span>: {renderCountries()}</p>
-                <p> <span style={{color:"red"}}>Genres </span> {rendergenres()}</p>
+                <p> <span style={{color:"#f74242"}}> Country </span>: {renderCountries()}</p>
+                <p> <span style={{color:"#f74242"}}>Genres </span> {rendergenres()}</p>
 
                 <button className="btn btn-danger" onClick={handleGoBack}>
                   Back to Home
