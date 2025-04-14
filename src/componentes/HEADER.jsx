@@ -71,44 +71,34 @@ function HEADER() {
                 <ul className="navbar-nav p-0 m-0  ">
 
 
+             
                   <li className="nav-item">
-                    <a onClick={() => navigate("/")} className="nav-link text-white me-4" >POPULAR</a>
+                    <a onClick={()=>{ return navigate(`/Genres/28`) , setShow(false) } } className="nav-link text-white me-4" >ACTION</a>
                   </li>
                   <li className="nav-item">
-                    <a onClick={() => navigate(`/TopRated`)} className="nav-link text-white me-4" >TOP RATED</a>
+                    <a onClick={()=>{ return navigate(`/Genres/80`) , setShow(false) } } className="nav-link text-white me-4" >CRIME</a>
                   </li>
                   <li className="nav-item">
-                    <a onClick={() => navigate(`/Upcoming`)} className="nav-link text-white me-4" >UP COMING</a>
+                    <a onClick={()=>{ return navigate(`/Genres/16`) , setShow(false) } } className="nav-link text-white me-4" >ANIMATION</a>
                   </li>
                   <li className="nav-item">
-                    <a onClick={() => navigate(`/Genres/28`)} className="nav-link text-white me-4" >ACTION</a>
+                    <a onClick={()=>{ return navigate(`/Genres/12`) , setShow(false) } } className="nav-link text-white me-4" >ADVENTURE</a>
                   </li>
                   <li className="nav-item">
-                    <a onClick={() => navigate(`/Genres/80`)} className="nav-link text-white me-4" >CRIME</a>
+                    <a onClick={()=>{ return navigate(`/Genres/35`) , setShow(false) } } className="nav-link text-white me-4" >COMEDY</a>
                   </li>
                   <li className="nav-item">
-                    <a onClick={() => navigate(`/Genres/12`)} className="nav-link text-white me-4" >ANIMATION</a>
+                    <a onClick={()=>{ return navigate(`/Genres/99`) , setShow(false) } } className="nav-link text-white me-4">DOCUMENTARY</a>
                   </li>
                   <li className="nav-item">
-                    <a onClick={() => navigate(`/Genres/12`)} className="nav-link text-white me-4" >ADVENTURE</a>
+                    <a onClick={()=>{ return navigate(`/Genres/18`) , setShow(false) } } className="nav-link text-white me-4">DRAMA</a>
                   </li>
                   <li className="nav-item">
-                    <a onClick={() => navigate(`/Genres/35`)} className="nav-link text-white me-4" >COMEDY</a>
+                    <a onClick={()=>{ return navigate(`/Genres/14`) , setShow(false) } } className="nav-link text-white me-4">FAMILY</a>
                   </li>
+             
                   <li className="nav-item">
-                    <a onClick={() => navigate(`/Genres/99`)} className="nav-link text-white me-4">DOCUMENTARY</a>
-                  </li>
-                  <li className="nav-item">
-                    <a onClick={() => navigate(`/Genres/18`)} className="nav-link text-white me-4">DRAMA</a>
-                  </li>
-                  <li className="nav-item">
-                    <a onClick={() => navigate(`/Genres/14`)} className="nav-link text-white me-4">FAMILY</a>
-                  </li>
-                  <li className="nav-item">
-                    <a onClick={() => navigate(`/Genres/16`)} className="nav-link text-white me-4" >HISTORY</a>
-                  </li>
-                  <li className="nav-item">
-                    <a onClick={() => navigate(`/Genres/27`)} className="nav-link text-white me-4" >HORROR</a>
+                    <a onClick={()=>{ return navigate(`/Genres/27`) , setShow(false) } } className="nav-link text-white me-4" >HORROR</a>
                   </li>
 
                 </ul>
@@ -135,7 +125,7 @@ function HEADER() {
                 <Dropdown.Item onClick={() => navigate(`/Genres/99`)}>Documentary</Dropdown.Item>
                 <Dropdown.Item onClick={() => navigate(`/Genres/18`)}>Drama</Dropdown.Item>
                 <Dropdown.Item onClick={() => navigate(`/Genres/14`)}>Family</Dropdown.Item>
-                <Dropdown.Item onClick={() => navigate(`/Genres/16`)}>History</Dropdown.Item>
+            
                 <Dropdown.Item onClick={() => navigate(`/Genres/27`)}>Horror</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>

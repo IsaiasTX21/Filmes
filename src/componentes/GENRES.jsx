@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function GENRES() {
   const [movie, setMovie] = useState([]);
   const { id } = useParams();
+   const [loader, setloader] = useState(true)
 
   const chave = "api_key=34eb4921b3be3ffb5436c69d930287bb";
 
@@ -18,9 +19,18 @@ function GENRES() {
       )
         .then((data) => data.json())
         .then((data) => setMovie(data.results));
+        setloader(false)
     }
     search();
   }, [id]);
+
+  if(loader){
+
+    return  <div className='bg-black min-vh-100 d-flex justify-content-center align-items-center '>  <div class=" mt-auto mb-auto spinner-border  text-danger" role="status">
+    <span class="visually-hidden ">Loading...</span>
+    </div>
+    </div>
+      }
 
   return (
    <> 

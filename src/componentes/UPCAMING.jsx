@@ -6,7 +6,7 @@ import HEADER from './HEADER';
 function UPCOMING() {
   const [movie, setMovie] = useState([]);
   const chave = "api_key=34eb4921b3be3ffb5436c69d930287bb"
- 
+  const [loader, setloader] = useState(true)
 
   useEffect(() => {
     async function api() {
@@ -14,10 +14,19 @@ function UPCOMING() {
       const api = await fetch(`https://api.themoviedb.org/3/movie/upcoming?${chave}`)
         .then((data) => data.json())
         .then((data) =>setMovie(data.results));
+        setloader(false)
     }
     api()
    
   }, []);
+
+  if(loader){
+
+    return  <div className='bg-black min-vh-100 d-flex justify-content-center align-items-center '>  <div class=" mt-auto mb-auto spinner-border  text-danger" role="status">
+    <span class="visually-hidden ">Loading...</span>
+    </div>
+    </div>
+      }
 
   return (
 
