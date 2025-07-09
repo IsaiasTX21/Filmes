@@ -109,12 +109,12 @@ function HEADER() {
             </Offcanvas>
 
 
-            <Button variant=" btn btn-warning  text-center rounded-2 Menu " className='d-md-none ' onClick={handleShow}>
+            <Button variant=" btn btn-warning  ms-3 text-center rounded-2 Menu " className='d-md-none ' onClick={handleShow}>
               <MenuIcon className='d-md-none' onClick={handleShow} />
             </Button>
 
             <Dropdown>
-              <Dropdown.Toggle variant=''  id="dropdown-basic" className='me-2 text-bg-warning   '>
+              <Dropdown.Toggle variant=''  id="dropdown-basic" className=' text-bg-warning   '>
                 Category
               </Dropdown.Toggle>
 
@@ -133,7 +133,7 @@ function HEADER() {
             </Dropdown>
 
             <input type='text' className='rounded-2 text-white' required onChange={inputchange}></input>
-            <button id='search' className='btn btn-warning  text-center rounded-2'  onClick={searchmovie} ><img  id="searchimg" src={search} alt="search" /></button>
+            <button id='search' className='btn btn-warning me-3 text-center rounded-2'  onClick={searchmovie} ><img  id="searchimg" src={search} alt="search" /></button>
 
           </div>
 

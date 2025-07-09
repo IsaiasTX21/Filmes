@@ -93,7 +93,7 @@ width: 100px !important;
     width: 100% !important;
   } 
   input{
-  width: 76%;
+ width: 70%;
   }
     #dropdown-basic{
       
@@ -101,12 +101,16 @@ width: 100px !important;
    
   }
   .Menu {
- width:12% ;
+width: 15% !important;
+
 
 }
 
 #search{
-width: 12% !important;
+width: 15% !important;
+}
+header{
+margin: auto;
 }
 }
 
