@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import MenuIcon from '@mui/icons-material/Menu';
 import Dropdown from 'react-bootstrap/Dropdown';
+import movie from "../assets/movie.png"
 
 function HEADER() {
 
@@ -42,7 +43,7 @@ function HEADER() {
               <ul className="navbar-nav">
 
                 <li className="nav-item ">
-                 <img src='https://i.ibb.co/dwVLK96k/icons8-rolo-de-filme-50.png'></img>
+                 <img id='movie' src={movie}></img>
                 </li>
                 <li className="nav-item">
                   <a onClick={() => navigate("/")} className="nav-link text-white me-1" >POPULAR </a>
@@ -60,11 +61,11 @@ function HEADER() {
           <div className='d-flex p-0 navmob  m-0 '>
 
 
-            <Offcanvas show={show} style={{ width: '50%', background: " rgb(0, 0, 0)" }} onHide={handleClose}>
+            <Offcanvas className="d-flex justify-content-center" show={show} style={{ width: '50%', background: " rgb(0, 0, 0)" }} onHide={handleClose}>
 
-              <Offcanvas.Header className='button d-flex text-center ' style={{ width: '90%', background: " rgb(161, 12, 12)", color: "red", left: "5%" }} closeButton  >
+              <Offcanvas.Header   style={{  background: " #F4B00F", color: "red"}} closeButton  >
 
-                <Offcanvas.Title className='text-white m-auto d-flex'>Responsive</Offcanvas.Title>
+                <Offcanvas.Title className='m-auto me-0 rounded-2 text-black' >menu</Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body className='text-center'>
 
@@ -107,12 +108,12 @@ function HEADER() {
             </Offcanvas>
 
 
-            <Button variant=" btn btn-danger  text-center rounded-0 Menu " className='d-md-none ' onClick={handleShow}>
+            <Button variant=" btn btn-warning  text-center rounded-2 Menu " className='d-md-none ' onClick={handleShow}>
               <MenuIcon className='d-md-none' onClick={handleShow} />
             </Button>
 
             <Dropdown>
-              <Dropdown.Toggle variant=''  id="dropdown-basic" className='me-2 text-bg-danger   '>
+              <Dropdown.Toggle variant=''  id="dropdown-basic" className='me-2 text-bg-warning   '>
                 Category
               </Dropdown.Toggle>
 
@@ -130,8 +131,8 @@ function HEADER() {
               </Dropdown.Menu>
             </Dropdown>
 
-            <input className='form-control rounded-0 border-0  ' required onChange={inputchange}></input>
-            <button className='btn btn-danger  text-center rounded-0' onClick={searchmovie} >Search</button>
+            <input type='text' className='rounded-2 text-white' required onChange={inputchange}></input>
+            <button className='btn btn-warning   text-center rounded-2' onClick={searchmovie} >Search</button>
 
           </div>
 

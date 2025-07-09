@@ -1,6 +1,23 @@
 *{
-margin: 0px;
+margin: 0px ;
 padding: 0px;
+}
+
+input:focus {
+  outline: none;
+}
+
+img{
+cursor: pointer;
+}
+
+input{
+  background-color:black !important;
+  
+}
+
+:root{
+background-color: black;
 }
 
 @keyframes animations {
@@ -11,6 +28,12 @@ transform:translateX(-30%) ;
 to {
 opacity: 1;
 }}
+
+#movie{
+width: 30px;
+position: relative;
+
+}
 
 @media screen and (width> 992px){
 .anime{
@@ -62,10 +85,8 @@ a{
 cursor: pointer;
 
 }
-input{
-  background-color: rgb(31, 30, 30) !important;
-  color: aliceblue !important;
-}
+
+
 
 @media screen and (width > 992px){
   .movie:hover{

@@ -1,26 +1,33 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import { Rating } from '@mui/material';
 
 function DETAILS() {
   const [movies, setMovies] = useState([]);
   const [loader, setLoader] = useState(true);
   const [imageLoaded, setImageLoaded] = useState(false); // Novo estado
-  const chave = "api_key=34eb4921b3be3ffb5436c69d930287bb";
+const navegate = useNavigate()
+
+  
   const { id } = useParams();
 
   async function api() {
     try {
-      const response = await fetch(`https://api.themoviedb.org/3/movie/${id}?${chave}`);
+      const response = await fetch(`https://api.themoviedb.org/3/movie/${id}?${import.meta.env.VITE_API_KEY}`);
       const data = await response.json();
       setMovies(data);
-
-      // Pré-carrega a imagem de fundo
+      console.log(movies)
+      
       const img = new Image();
       img.src = `https://image.tmdb.org/t/p/w1280${data.backdrop_path}`;
+        
+      if(data.backdrop_path === null){
+        return setLoader(false)
+      }
       img.onload = () => {
         setImageLoaded(true);
         setTimeout(() => setLoader(false), 500); // Delay suave
+        
       };
     } catch (error) {
       console.error("Erro ao carregar detalhes:", error);
@@ -35,8 +42,8 @@ function DETAILS() {
 
   if (loader) {
     return (
-      <div className="bg-black min-vh-100 d-flex justify-content-center align-items-center">
-        <div className="spinner-border text-danger" role="status">
+      <div className="bg-black min-vh-100 d-flex align-items-center justify-content-center">
+        <div className="spinner-border text-warning" role="status">
           <span className="visually-hidden">Loading...</span>
         </div>
       </div>
@@ -62,7 +69,7 @@ function DETAILS() {
   };
 
   const handleGoBack = () => {
-    window.history.back();
+    navegate(-1)
   };
 
   return (
@@ -81,17 +88,17 @@ function DETAILS() {
         <div className="row det justify-content-center">
           <div className="card info">
             <div className="card-body text-center">
-              <h5 className="card-title" style={{ color: "#f74242" }}>{movies.title}</h5>
+              <h5 className="card-title" style={{ color: "#E6A003" }}>{movies.title}</h5>
               <p className="card-text text-white">{movies.overview}</p>
               <Rating
                 name="half-rating-read"
                 value={movies.vote_average / 2}
                 readOnly
               />
-              <p><span style={{ color: "#f74242" }}>Country</span>: {renderCountries()}</p>
-              <p><span style={{ color: "#f74242" }}>Genres</span>: {renderGenres()}</p>
+              <p><span style={{ color: "#E6A003" }}>Country</span>: {renderCountries()}</p>
+              <p><span style={{ color: "#E6A003" }}>Genres</span>: {renderGenres()}</p>
 
-              <button className="btn btn-danger" onClick={handleGoBack}>
+              <button className="btn btn-warning" onClick={handleGoBack}>
                 Back to Home
               </button>
             </div>
