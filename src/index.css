@@ -35,13 +35,6 @@ position: relative;
 
 }
 
-@media screen and (width> 992px){
-.anime{
-    animation: animations ;
-    animation-timeline: view();
-  
- 
-}}
 @media screen and (width < 768px){
   #dropdown-basic{
       
@@ -94,6 +87,12 @@ cursor: pointer;
       transition: transform 0.4s
     
     }
+    .anime{
+    animation: animations ;
+    animation-timeline: view();
+  
+ 
+}
 }
 
 @media screen and (width < 768px){
@@ -101,7 +100,7 @@ cursor: pointer;
     width: 100% !important;
   } 
   input{
-  width: 100% !important;
+  width: 85% !important;
   }
 }
 

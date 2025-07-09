@@ -132,7 +132,7 @@ function HEADER() {
             </Dropdown>
 
             <input type='text' className='rounded-2 text-white' required onChange={inputchange}></input>
-            <button className='btn btn-warning   text-center rounded-2' onClick={searchmovie} >Search</button>
+            <button className='btn btn-warning  text-center rounded-2' onClick={searchmovie} >Search</button>
 
           </div>
 
