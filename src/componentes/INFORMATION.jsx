@@ -13,7 +13,7 @@ const navegate = useNavigate()
 
   async function api() {
     try {
-      const response = await fetch(`https://api.themoviedb.org/3/movie/${id}?${import.meta.env.VITE_API_KEY}`);
+      const response = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${import.meta.env.VITE_API_KEY}`);
       const data = await response.json();
       setMovies(data);
       console.log(movies)

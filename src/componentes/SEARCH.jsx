@@ -18,7 +18,7 @@ function SEARCH() {
     async function search() {
       try{ 
          const api = await fetch(
-        `https://api.themoviedb.org/3/search/movie?${import.meta.env.VITE_API_KEY}&query=${id}`
+        `https://api.themoviedb.org/3/search/movie?api_key=${import.meta.env.VITE_API_KEY}&query=${id}`
       )
         .then((data) => data.json())
         .then((data) => setMovie(data.results));

@@ -29,7 +29,7 @@ function TOPRATED() {
   useEffect(() => {
     async function TOPRATED() {
     try{ 
-      const api = await fetch(`https://api.themoviedb.org/3/movie/top_rated?${import.meta.env.VITE_API_KEY}`)
+      const api = await fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${import.meta.env.VITE_API_KEY}`)
         .then((data) => data.json())
         .then((data) =>setMovie(data.results));
        

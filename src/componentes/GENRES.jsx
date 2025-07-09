@@ -20,7 +20,7 @@ function GENRES() {
     async function search() {
       try{
        const api = await fetch(
-        `https://api.themoviedb.org/3/discover/movie?${import.meta.env.VITE_API_KEY}&with_genres=${id}`
+        `https://api.themoviedb.org/3/discover/movie?api_key=${import.meta.env.VITE_API_KEY}&with_genres=${id}`
       )
         .then((data) => data.json())
         .then((data) => setMovie(data.results));

@@ -18,7 +18,7 @@ function Popular() {
   useEffect(() => {
     async function fetchMovies() {
       try {
-        const response = await fetch(`https://api.themoviedb.org/3/discover/movie?${import.meta.env.VITE_API_KEY}`);
+        const response = await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${import.meta.env.VITE_API_KEY}`);
         const data = await response.json();
         setMovies(data.results);
       } catch (error) {

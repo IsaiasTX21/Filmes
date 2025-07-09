@@ -31,7 +31,7 @@ function handleGoToDetails(id) {
   useEffect(() => {
     async function api() {
        try{
-  const api = await fetch(`https://api.themoviedb.org/3/movie/upcoming?${import.meta.env.VITE_API_KEY}`)
+  const api = await fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${import.meta.env.VITE_API_KEY}`)
         .then((data) => data.json())
         .then((data) =>setMovie(data.results));
       
