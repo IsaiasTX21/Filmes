@@ -6,6 +6,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import MenuIcon from '@mui/icons-material/Menu';
 import Dropdown from 'react-bootstrap/Dropdown';
 import movie from "../assets/movie.png"
+import search from "../assets/search.png"
 
 function HEADER() {
 
@@ -132,7 +133,7 @@ function HEADER() {
             </Dropdown>
 
             <input type='text' className='rounded-2 text-white' required onChange={inputchange}></input>
-            <button className='btn btn-warning  text-center rounded-2' onClick={searchmovie} >Search</button>
+            <button id='search' className='btn btn-warning  text-center rounded-2'  onClick={searchmovie} ><img  id="searchimg" src={search} alt="search" /></button>
 
           </div>
 

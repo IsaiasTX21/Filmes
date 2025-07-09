@@ -35,12 +35,10 @@ position: relative;
 
 }
 
-@media screen and (width < 768px){
-  #dropdown-basic{
-      
-    display: none;
-   
-  }}
+#searchimg{
+  width: 20px;
+}
+
  
 .info {
   background-color: rgba(0, 0, 0, 0.4)  !important; /* Black w/opacity/see-through */
@@ -65,18 +63,14 @@ background-position: center;
 background-color:  rgb(0, 0, 0) !important;
 }
 
-.Menu {
- width:100px ;
-position: relative;
-}
 
-.button {
-  position: relative;
- 
-}
+
 a{
 cursor: pointer;
+}
 
+#search{
+width: 100px !important;
 }
 
 
@@ -90,9 +84,8 @@ cursor: pointer;
     .anime{
     animation: animations ;
     animation-timeline: view();
-  
- 
-}
+  }
+
 }
 
 @media screen and (width < 768px){
@@ -100,8 +93,21 @@ cursor: pointer;
     width: 100% !important;
   } 
   input{
-  width: 85% !important;
+  width: 76%;
   }
+    #dropdown-basic{
+      
+    display: none;
+   
+  }
+  .Menu {
+ width:12% ;
+
+}
+
+#search{
+width: 12% !important;
+}
 }
 
 
