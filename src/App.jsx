@@ -15,7 +15,7 @@ function App() {
       <Routes>
         <Route path='' element={<POPULAR />} />
         <Route path='Genres/:id' element={<GENRES />} />
-        <Route path='Search/:id' element={<SEARCH />} />
+        <Route path='Search/:moviesearch' element={<SEARCH />} />
         <Route path='TopRated' element={<TOPRATED />} />
         <Route path='Upcoming' element={<UPCOMING />} />
         <Route path='Details/:id' element={<DETAILS />} />

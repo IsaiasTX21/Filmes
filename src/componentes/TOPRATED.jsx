@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import HEADER from './HEADER';
+import Carousel from 'react-bootstrap/Carousel';
 
 function TOPRATED() {
   const [movie, setMovie] = useState([]);
@@ -55,17 +56,45 @@ function TOPRATED() {
       }
 
   return (
-    <div className='bg-black'> 
-      <HEADER />
-   <div className="container ">
-        <div className="row ">
+    <div className='containermovie  bg-black'> 
+        <HEADER />
+
+        <Carousel>
+      <Carousel.Item>
+            <div style={{height:"500px",width:"100%", backgroundPositionY:"28%",backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(https:image.tmdb.org/t/p/original${movie[10].poster_path})`}}></div>
+        <Carousel.Caption>
+          <h3 className='gold'>{movie[10].title}</h3>
+          
+        </Carousel.Caption>
+      </Carousel.Item>
+       
+      <Carousel.Item>
+          <div style={{height:"500px",width:"100%",  backgroundPositionY:"20%",backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(https:image.tmdb.org/t/p/original${movie[2].poster_path})`}}></div>
+        <Carousel.Caption>
+          <h3 className='gold'>{movie[2].title} </h3>
+         
+        </Carousel.Caption>
+      </Carousel.Item>
+
+      <Carousel.Item>
+            <div style={{height:"500px",width:"100%",  backgroundPositionY:"12%", backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(https:image.tmdb.org/t/p/original${movie[5].poster_path})`}}></div>
+             
+        <Carousel.Caption>
+          <h3 className='gold' >{movie[5].title}</h3>
+
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+
+  
+        <div className="row m-auto mt-5 ">
           {   console.log(movie)}
           {movie.map((element) => {
             return (
-              <div key={element.id} className=" col-md-6 col-lg-4 col-xl-3 ">
+              <div key={element.id} className=" col-md-6 col-lg-4 col-xl-3 col-xxl-2">
                 {/* Cada card */}
-                <div style={{backgroundColor:"rgb(0, 0, 0)"}} className="card mt-5 img-fluid justify-content-center text-center anime">
-                <img onClick={()=> handleGoToDetails(element.id)} src={`https://image.tmdb.org/t/p/w500${element.poster_path}`} style={{  height:"450px "}} className="movie card-img-top im-g-fluid" alt="" />
+                <div style={{backgroundColor:"rgb(0, 0, 0)"}} className="card img-fluid justify-content-center text-center anime">
+                <img onClick={()=> handleGoToDetails(element.id)} src={`https://image.tmdb.org/t/p/w500${element.poster_path}`} className="movie card-img-top img-fluid" alt="" />
                   <div className="card-body card-space ">
                   <h5 className="card-title text-white">{element.title}</h5>
                   <p className="card-text position-relative"> </p>
@@ -77,7 +106,7 @@ function TOPRATED() {
           })}
         </div>
       </div>
-      </div>
+     
   );
 }
 

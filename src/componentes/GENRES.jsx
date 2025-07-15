@@ -57,18 +57,18 @@ function GENRES() {
 
   return (
    <> 
-    <HEADER />
-    <div className='bg-black'> 
-   <div className="container ">
-        {/* Usando a classe 'row' aqui para agrupar os cards */}
-        <div className="row ">
+   
+    <div className='containermovie bg-black'> 
+
+       <HEADER/>
+        <div className="row m-auto">
        
           {movie.map((element) => {
             return (
-              <div key={element.id} className=" col-md-6 col-lg-4 col-xl-3 ">
+              <div key={element.id} className="  col-md-6 col-lg-4 col-xl-3 col-xxl-2  ">
                 {/* Cada card */}
-                <div style={{backgroundColor:"rgb(0, 0, 0)"}} className="card mt-5 img-fluid justify-content-center text-center anime">
-                <img onClick={()=> handleGoToDetails(element.id)} src={`https://image.tmdb.org/t/p/w500${element.poster_path}`} style={{  height:"450px "}} className="movie card-img-top im-g-fluid" alt="" /> 
+                <div style={{backgroundColor:"rgb(0, 0, 0)"}} className="card img-fluid justify-content-center text-center anime">
+                <img onClick={()=> handleGoToDetails(element.id)} src={`https://image.tmdb.org/t/p/w500${element.poster_path}`} className="movie card-img-top im-g-fluid" alt="" /> 
                   <div className="card-body card-space ">
                     <h5 className="card-title text-white">{element.title}</h5>
                     <p className="card-text position-relative"> </p>
@@ -80,7 +80,7 @@ function GENRES() {
           })}
         </div>
       </div>
-      </div>
+      
       </>
    
   );

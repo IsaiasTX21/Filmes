@@ -2,10 +2,14 @@ import { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from 'react-router-dom'; 
 import HEADER from './HEADER';
+import Carousel from 'react-bootstrap/Carousel';
 
 function Popular() {
-  const [movies, setMovies] = useState([]);
+  const [movie, setMovies] = useState([]);
   const [loader, setLoader] = useState(true);
+
+console.log(movie)
+ 
 
   const navigate = useNavigate();
 
@@ -14,7 +18,7 @@ function Popular() {
     navigate(`/Details/${id}`);
   }
 
-  // Requisição à API
+
   useEffect(() => {
     async function fetchMovies() {
       try {
@@ -44,7 +48,6 @@ fetchMovies();
     }
   }, [loader]);
 
-  // Loader
   if (loader) {
     return (
       <div className='bg-black min-vh-100 d-flex justify-content-center align-items-center'>
@@ -55,20 +58,48 @@ fetchMovies();
     );
   }
 
-  // Render dos filmes
+
   return (
     <>
-      <div className='bg-black'>
+      <div  className='containermovie bg-black '>
         <HEADER />
-        <div className="container">
-          <div className="row">
-            {movies.map((movie) => (
-              <div key={movie.id} className="col-md-6 col-lg-4 col-xl-3">
-                <div className="card mt-5 text-center anime" style={{ backgroundColor: "rgb(0, 0, 0)" }}>
+
+        <Carousel>
+      <Carousel.Item>
+               <div style={{height:"500px",width:"100%", backgroundPositionY:"60%",  backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(https:image.tmdb.org/t/p/original${movie[6].poster_path})`}}></div>
+        <Carousel.Caption>
+          <h3 className=' gold'>{movie[6].title}</h3>
+        
+        </Carousel.Caption>
+      </Carousel.Item>
+       
+      <Carousel.Item>
+          <div style={{height:"500px",width:"100%", backgroundPositionY:"15%", backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(https:image.tmdb.org/t/p/original${movie[18].poster_path})`}}></div>
+        <Carousel.Caption>
+          <h3 className='text-dark'>{movie[18].title}</h3>
+          
+        </Carousel.Caption>
+      </Carousel.Item>
+
+      <Carousel.Item>
+              <div style={{height:"500px",width:"100%",backgroundPosition:"center",backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(https:image.tmdb.org/t/p/original${movie[15].poster_path})`}}></div>
+        <Carousel.Caption>
+              <h3 className='gold'>{movie[15].title}</h3>
+         
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+
+      
+       
+          <div className=" row m-auto mt-5">
+            {movie.map((movie) => (
+              <div  key={movie.id}  className="col-md-6 col-lg-4 col-xl-3 col-xxl-2 ">
+                <div className=" movie  card text-center anime" style={{ backgroundColor: "rgb(0, 0, 0)" }}>
                   <img
                     onClick={() => handleGoToDetails(movie.id)}
                     src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                    style={{ height: "450px" }}
+                  
                     className="card-img-top img-fluid"
                     alt={movie.title}
                   />
@@ -79,7 +110,7 @@ fetchMovies();
               </div>
             ))}
           </div>
-        </div>
+     
       </div>
     </>
   );

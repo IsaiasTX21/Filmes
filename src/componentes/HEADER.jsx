@@ -34,46 +34,91 @@ function HEADER() {
     }
   }
 
+  function Enter(e){
+   if(e.code == "Enter"){
+      navigate(`/Search/${namemovie}`)
+   }
+  }
+
   return (
+
+
+
     <>
 
-      <header className=' m-0 p-0 sticky-top'>
-        <nav className='navbar justify-content-center  navbar-expand-md list-unstyled  '>
-          <nav className="navbar   ">
-            <div className="collapse navbar-collapse  " >
-              <ul className="navbar-nav">
+      <header className=' m-0   p-0 sticky-top'>
+        <nav className='navbar navbar-expand-lg list-unstyled  '>
+    
 
-                <li className="nav-item ">
+            <div style={{width:"50%"}} className=" collapse navbar-collapse   " >
+              <ul  className="navbar-nav w-100   ">
+
+                <li style={{marginLeft:"20%"}} className="nav-item" >
                  <img id='movie' src={movie}></img>
                 </li>
-                <li className="nav-item">
-                  <a onClick={() => navigate("/")} className="nav-link text-white me-1" >POPULAR </a>
+                <li className="nav-item  ms-3 ">
+                  <a onClick={() => navigate("/")} className="nav-link text-white" >POPULAR </a>
+                </li>
+                <li className="nav-item ">
+                  <a onClick={() => navigate(`/TopRated`)} className="nav-link text-white   ">TOP RATED</a>
                 </li>
                 <li className="nav-item">
-                  <a onClick={() => navigate(`/TopRated`)} className="nav-link text-white me-1 ">TOP RATED</a>
+                  <a onClick={() => navigate(`/Upcoming`)} className="nav-link text-white " >UP COMING</a>
                 </li>
-                <li className="nav-item">
-                  <a onClick={() => navigate(`/Upcoming`)} className="nav-link text-white me-1" >UP COMING</a>
+                <li className='nav-item'>
+                 <a>   <Button variant=" btn btn-warning   text-center rounded-2 Menu " className='d-md-none ' onClick={handleShow}>
+              <MenuIcon className='d-md-none' onClick={handleShow} />
+            </Button>
+
+            <Dropdown>
+              <Dropdown.Toggle variant=''  id="dropdown-basic" className=' ms-2 text-bg-warning   '>
+                Category
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu className=' dropdown-menu-dark text-center'>
+                <Dropdown.Item onClick={() => navigate(`/Genres/28`)}>Action</Dropdown.Item>
+                <Dropdown.Item onClick={() => navigate(`/Genres/80`)}>Crime</Dropdown.Item>
+                <Dropdown.Item onClick={() => navigate(`/Genres/16`)} >Animation</Dropdown.Item>
+                <Dropdown.Item onClick={() => navigate(`/Genres/12`)}>Adventure</Dropdown.Item>
+                <Dropdown.Item onClick={() => navigate(`/Genres/35`)}>Comedy</Dropdown.Item>
+                <Dropdown.Item onClick={() => navigate(`/Genres/99`)}>Documentary</Dropdown.Item>
+                <Dropdown.Item onClick={() => navigate(`/Genres/18`)}>Drama</Dropdown.Item>
+                <Dropdown.Item onClick={() => navigate(`/Genres/14`)}>Family</Dropdown.Item>
+                 <Dropdown.Item onClick={() => navigate(`/Genres/27`)}>Horror</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown></a>
+
                 </li>
               </ul>
             </div>
-          </nav>
 
-          <div className='d-flex p-0 navmob  m-0 '>
+      
+
+          <div  id='mobilediv' className=' d-flex  '>
 
 
-            <Offcanvas className="d-flex justify-content-center" show={show} style={{ width: '50%', background: " rgb(0, 0, 0)" }} onHide={handleClose}>
+            <Offcanvas  show={show} style={{ width: '50%', background: " rgb(0, 0, 0)" }} onHide={handleClose}>
 
               <Offcanvas.Header   style={{  background: " #F4B00F", color: "red"}} closeButton  >
 
-                <Offcanvas.Title className='m-auto me-0 rounded-2 text-black' >menu</Offcanvas.Title>
+                <Offcanvas.Title className=" ms-auto rounded-2 text-black" >menu</Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body className='text-center'>
 
-                <ul className="navbar-nav p-0 m-0  ">
-
-
-             
+                <ul className="navbar-nav p-0 m-0 ">
+                   
+                  <li className="nav-item">
+                    <a onClick={()=>{ return navigate(`/`) , setShow(false) } } className="nav-link text-white me-4" >POPULAR</a>
+                  </li>
+                   
+                  <li className="nav-item">
+                    <a onClick={()=>{ return navigate(`/TopRated`) , setShow(false) } } className="nav-link text-white me-4" >TOP RATED</a>
+                  </li>
+                   
+                  <li className="nav-item">
+                    <a onClick={()=>{ return navigate(`/Upcoming`) , setShow(false) } } className="nav-link text-white me-4" >UPCOMING</a>
+                  </li>
+                  
                   <li className="nav-item">
                     <a onClick={()=>{ return navigate(`/Genres/28`) , setShow(false) } } className="nav-link text-white me-4" >ACTION</a>
                   </li>
@@ -109,31 +154,14 @@ function HEADER() {
             </Offcanvas>
 
 
-            <Button variant=" btn btn-warning  ms-3 text-center rounded-2 Menu " className='d-md-none ' onClick={handleShow}>
-              <MenuIcon className='d-md-none' onClick={handleShow} />
+            <Button variant=" btn btn-warning    text-center rounded-2 Menu " className='d-lg-none' onClick={handleShow}>
+              <MenuIcon className='d-lg-none' onClick={handleShow} />
             </Button>
 
-            <Dropdown>
-              <Dropdown.Toggle variant=''  id="dropdown-basic" className=' text-bg-warning   '>
-                Category
-              </Dropdown.Toggle>
+   
 
-              <Dropdown.Menu className=' dropdown-menu-dark text-center'>
-                <Dropdown.Item onClick={() => navigate(`/Genres/28`)}>Action</Dropdown.Item>
-                <Dropdown.Item onClick={() => navigate(`/Genres/80`)}>Crime</Dropdown.Item>
-                <Dropdown.Item onClick={() => navigate(`/Genres/16`)} >Animation</Dropdown.Item>
-                <Dropdown.Item onClick={() => navigate(`/Genres/12`)}>Adventure</Dropdown.Item>
-                <Dropdown.Item onClick={() => navigate(`/Genres/35`)}>Comedy</Dropdown.Item>
-                <Dropdown.Item onClick={() => navigate(`/Genres/99`)}>Documentary</Dropdown.Item>
-                <Dropdown.Item onClick={() => navigate(`/Genres/18`)}>Drama</Dropdown.Item>
-                <Dropdown.Item onClick={() => navigate(`/Genres/14`)}>Family</Dropdown.Item>
-            
-                <Dropdown.Item onClick={() => navigate(`/Genres/27`)}>Horror</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-
-            <input type='text' className='rounded-2 text-white' required onChange={inputchange}></input>
-            <button id='search' className='btn btn-warning me-3 text-center rounded-2'  onClick={searchmovie} ><img  id="searchimg" src={search} alt="search" /></button>
+            <input   type='text' className='text-white rounded-2' required onKeyDown={(e)=> Enter(e) } onChange={inputchange}/>
+            <button id='search' className='btn btn-warning  '  onClick={searchmovie} ><img  id="searchimg" src={search} alt="search" /></button>
 
           </div>
 

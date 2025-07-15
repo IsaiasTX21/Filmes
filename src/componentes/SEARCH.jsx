@@ -1,11 +1,13 @@
 import HEADER from "./HEADER";
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import notfound from "../assets/notfound.png"
 
 
 function SEARCH() {
   const [movie, setMovie] = useState([]);
-  const { id } = useParams();
+  const { moviesearch } = useParams();
+
   const [loader, setloader] = useState(true)
   const navigate = useNavigate()
 
@@ -15,24 +17,35 @@ function SEARCH() {
   }
 
   useEffect(() => {
+ 
     async function search() {
+
+    
+
       try{ 
          const api = await fetch(
-        `https://api.themoviedb.org/3/search/movie?api_key=${import.meta.env.VITE_API_KEY}&query=${id}`
+        `https://api.themoviedb.org/3/search/movie?api_key=${import.meta.env.VITE_API_KEY}&query=${moviesearch}`
       )
         .then((data) => data.json())
         .then((data) => setMovie(data.results));
-     
+       
+    
       } catch(error){
        console.log(error)
       }
     finally{
-    setloader(false)
-    }}
-     
-    search();
-  }, [id]);
 
+    setloader(false)
+
+
+    }}
+
+    search();
+   
+
+  }, [moviesearch]);
+   
+  
 
   useEffect(()=>{
     if(!loader){  
@@ -50,22 +63,24 @@ function SEARCH() {
     </div>
       }
 
+
+
   return (
    <> 
+   {movie.length > 0 ? (
    
-      <HEADER />
-
-      <div className='bg-black'> 
-   <div className="container ">
-        {/* Usando a classe 'row' aqui para agrupar os cards */}
-        <div className="row ">
+    <div className='containermovie bg-black'> 
+          <HEADER />
+ 
+      
+        <div className="row m-auto">
           {   console.log(movie)}
           {movie.map((element) => {
             return (
-              <div key={element.id} className=" col-md-6 col-lg-4 col-xl-3 ">
-                {/* Cada card */}
-                <div style={{backgroundColor:"rgb(0, 0, 0)"}} className="card mt-5 img-fluid justify-content-center text-center anime">
-                <img onClick={()=> handleGoToDetails(element.id)} src={`https://image.tmdb.org/t/p/w500${element.poster_path}`} style={{  height:"450px "}} className="movie card-img-top im-g-fluid" alt="" />
+              <div key={element.id} className=" col-md-6 col-lg-4 col-xl-3 col-xxl-2 ">
+             
+                <div style={{backgroundColor:"rgb(0, 0, 0)"}} className="card img-fluid justify-content-center text-center anime">
+                <img onClick={()=> handleGoToDetails(element.id)} src={`https://image.tmdb.org/t/p/w500${element.poster_path}`}  className="movie card-img-top im-g-fluid" alt="" />
                   <div className="card-body card-space ">
                   <h5 className="card-title text-white">{element.title}</h5>
                   <p className="card-text position-relative"> </p>
@@ -77,7 +92,11 @@ function SEARCH() {
           })}
         </div>
       </div>
-      </div>
+     
+   
+   ): <>
+      <HEADER />
+   <div style={{backgroundImage:`url(${notfound})`, backgroundSize:"100%", backgroundPositionY:"10%", height:"94.5vh", backgroundRepeat:"repeat" }}    className=" d-flex justify-content-center"> </div></>}
       </>
    
   );

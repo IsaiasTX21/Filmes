@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from 'react-router-dom';
 import HEADER from './HEADER';
+import Carousel from 'react-bootstrap/Carousel';
 
 function UPCOMING() {
   const [movie, setMovie] = useState([]);
@@ -57,18 +58,49 @@ function handleGoToDetails(id) {
 
   return (
 
-   <div className='bg-black'> 
-      <HEADER/>
-   <div className="container ">
-        {/* Usando a classe 'row' aqui para agrupar os cards */}
-        <div className="row ">
+   <div className='containermovie bg-black '> 
+
+      <HEADER />
+   
+           <Carousel>
+         <Carousel.Item>
+                   <div style={{height:"500px",width:"100%", backgroundPositionY:"20%",backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(https:image.tmdb.org/t/p/original${movie[12].poster_path})`}}></div>
+           <Carousel.Caption>
+             <h3 className='text-white'>{movie[12].title}</h3>
+         
+           </Carousel.Caption>
+         </Carousel.Item>
+           
+         <Carousel.Item>
+             <div style={{height:"500px",width:"100%",  backgroundPositionY:"8px",backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(https:image.tmdb.org/t/p/original${movie[3].poster_path})`}}></div>
+           <Carousel.Caption>
+             <h3 className='gold'>{movie[3].title}</h3>
+             
+           </Carousel.Caption>
+         </Carousel.Item>
+   
+         <Carousel.Item>
+               
+             <div style={{height:"500px",width:"100%",  backgroundPositionY:"32%", backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(https:image.tmdb.org/t/p/original${movie[14].poster_path})`}}></div>
+           <Carousel.Caption>
+            <h3 className='text-white'>{movie[14].title}</h3>
+    
+           </Carousel.Caption>
+         </Carousel.Item>
+       </Carousel>
+   
+     
+   
+   <div className="row m-auto mt-5">
+
+   
           {   console.log(movie)}
           {movie.map((element) => {
             return (
-              <div key={element.id} className=" col-md-6 col-lg-4 col-xl-3 ">
+              <div key={element.id} className=" col-md-6 col-lg-4 col-xl-3 col-xxl-2 ">
                 {/* Cada card */}
-                <div style={{backgroundColor:"rgb(0, 0, 0)"}} className="card mt-5 img-fluid justify-content-center text-center anime">
-               <img onClick={()=> handleGoToDetails(element.id)} src={`https://image.tmdb.org/t/p/w500${element.poster_path}`} style={{  height:"450px "}} className="movie card-img-top im-g-fluid" alt="" />
+                <div style={{backgroundColor:"rgb(0, 0, 0)"}} className="movie  card img-fluid justify-content-center text-center anime">
+               <img onClick={()=> handleGoToDetails(element.id)} src={`https://image.tmdb.org/t/p/w500${element.poster_path}`}  className="movie card-img-top im-g-fluid" alt="" />
                   <div className="card-body card-space ">
                   <h5 className="card-title text-white">{element.title}</h5>
                   <p className="card-text position-relative"> </p>
@@ -79,7 +111,7 @@ function handleGoToDetails(id) {
           })}
         </div>
       </div>
-      </div>
+
 
   );
 }
