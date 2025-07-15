@@ -16,7 +16,7 @@ function handleGoToDetails(id) {
   navigate(`/Details/${id}`);
 }
 
-
+console.log(movie)
 
    useEffect(() => {
     if (!loader) {
@@ -64,15 +64,15 @@ function handleGoToDetails(id) {
    
            <Carousel>
          <Carousel.Item>
-                   <div style={{height:"500px",width:"100%", backgroundPositionY:"20%",backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(https:image.tmdb.org/t/p/original${movie[12].poster_path})`}}></div>
+                   <div style={{height:"700px",width:"100%", backgroundPositionY:"00%",backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:"url(https:image.tmdb.org/t/p/original/hwlyY7LJdEFbCPaGNXiskKKmJ5X.jpg" }}></div>
            <Carousel.Caption>
-             <h3 className='text-white'>{movie[12].title}</h3>
+             <h3 className='gold'>{movie[12].title}</h3>
          
            </Carousel.Caption>
          </Carousel.Item>
            
          <Carousel.Item>
-             <div style={{height:"500px",width:"100%",  backgroundPositionY:"8px",backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(https:image.tmdb.org/t/p/original${movie[3].poster_path})`}}></div>
+             <div style={{height:"700px",width:"100%",  backgroundPositionY:"8px",backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(https:image.tmdb.org/t/p/original/ktqPs5QyuF8SpKnipvVHb3fwD8d.jpg)`}}></div>
            <Carousel.Caption>
              <h3 className='gold'>{movie[3].title}</h3>
              
@@ -81,7 +81,7 @@ function handleGoToDetails(id) {
    
          <Carousel.Item>
                
-             <div style={{height:"500px",width:"100%",  backgroundPositionY:"32%", backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(https:image.tmdb.org/t/p/original${movie[14].poster_path})`}}></div>
+             <div style={{height:"700px",width:"100%",  backgroundPositionY:"10%", backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:"url(https:image.tmdb.org/t/p/original/aFRDH3P7TX61FVGpaLhKr6QiOC1.jpg)"}}></div>
            <Carousel.Caption>
             <h3 className='text-white'>{movie[14].title}</h3>
     

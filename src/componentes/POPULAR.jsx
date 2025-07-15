@@ -8,9 +8,6 @@ function Popular() {
   const [movie, setMovies] = useState([]);
   const [loader, setLoader] = useState(true);
 
-console.log(movie)
- 
-
   const navigate = useNavigate();
 
   function handleGoToDetails(id) {
@@ -32,6 +29,8 @@ console.log(movie)
       }
     }
 fetchMovies();
+
+
     
   }, []);
 
@@ -66,7 +65,7 @@ fetchMovies();
 
         <Carousel>
       <Carousel.Item>
-              {movie[6].poster_path  ? ( <div style={{height:"500px",width:"100%", backgroundPositionY:"60%",  backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(https:image.tmdb.org/t/p/original${movie[6].poster_path})`}}></div>) : <p>não carregou</p> }
+              <div style={{height:"700px",width:"100%", backgroundPositionY:"60%",  backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:'url(https:image.tmdb.org/t/p/original/hqcexYHbiTBfDIdDWxrxPtVndBX.jpg)'}}> </div>
         <Carousel.Caption>
           <h3 className=' gold'>{movie[6].title}</h3>
         
@@ -75,7 +74,7 @@ fetchMovies();
       </Carousel.Item>
        
       <Carousel.Item>
-           {movie[18].poster_path  ? ( <div style={{height:"500px",width:"100%", backgroundPositionY:"60%",  backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(https:image.tmdb.org/t/p/original${movie[18].poster_path})`}}></div>) : <p>não carregou</p>}
+           {movie[18].poster_path  ? ( <div style={{height:"700px",width:"100%", backgroundPositionY:"10%",  backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:'url(https:image.tmdb.org/t/p/original/vqBmyAj0Xm9LnS1xe1MSlMAJyHq.jpg)'}}></div>) : <p>não carregou</p>}
         <Carousel.Caption>
           <h3 className='text-dark'>{movie[18].title}</h3>
         </Carousel.Caption>
@@ -85,7 +84,7 @@ fetchMovies();
     
       <Carousel.Item>
 
-         {movie[15].poster_path  ? ( <div style={{height:"500px",width:"100%", backgroundPositionY:"60%",  backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(https:image.tmdb.org/t/p/original${movie[15].poster_path})`}}></div>) : <p>não carregou</p>}
+         {movie[15].poster_path  ? ( <div style={{height:"700px",width:"100%", backgroundPositionY:"60%",  backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:"url(https:image.tmdb.org/t/p/original/ovZasZ9EeZcp6UsrElkQ63hFCd.jpg)"}}></div>) : <p>não carregou</p>}
         <Carousel.Caption>
             
               <h3 className='gold'>{movie[15].title}</h3>

@@ -8,6 +8,8 @@ function TOPRATED() {
   const [movie, setMovie] = useState([]);
    const [loader, setloader] = useState(true)
    const navigate = useNavigate()
+
+   console.log(movie)
  
      function handleGoToDetails(id) {
     sessionStorage.setItem("scrollPosition", window.scrollY);  // mesma chave!
@@ -61,7 +63,7 @@ function TOPRATED() {
 
         <Carousel>
       <Carousel.Item>
-            <div style={{height:"500px",width:"100%", backgroundPositionY:"28%",backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(https:image.tmdb.org/t/p/original${movie[10].poster_path})`}}></div>
+            <div style={{height:"700px",width:"100%", backgroundPositionY:"28%",backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(https:image.tmdb.org/t/p/original/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg`}}></div>
         <Carousel.Caption>
           <h3 className='gold'>{movie[10].title}</h3>
           
@@ -69,7 +71,7 @@ function TOPRATED() {
       </Carousel.Item>
        
       <Carousel.Item>
-          <div style={{height:"500px",width:"100%",  backgroundPositionY:"20%",backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(https:image.tmdb.org/t/p/original${movie[2].poster_path})`}}></div>
+          <div style={{height:"700px",width:"100%",  backgroundPositionY:"20%",backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:"url(https:image.tmdb.org/t/p/original/43c1efKzA1kigNzY0HBzeoXp8LR.jpg"}}></div>
         <Carousel.Caption>
           <h3 className='gold'>{movie[2].title} </h3>
          
@@ -77,7 +79,7 @@ function TOPRATED() {
       </Carousel.Item>
 
       <Carousel.Item>
-            <div style={{height:"500px",width:"100%",  backgroundPositionY:"12%", backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(https:image.tmdb.org/t/p/original${movie[5].poster_path})`}}></div>
+            <div style={{height:"700px",width:"100%",  backgroundPositionY:"12%", backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(https:image.tmdb.org/t/p/original/ow3wq89wM8qd5X7hWKxiRfsFf9C.jpg)`}}></div>
              
         <Carousel.Caption>
           <h3 className='gold' >{movie[5].title}</h3>
@@ -88,7 +90,7 @@ function TOPRATED() {
 
   
         <div className="row m-auto mt-5 ">
-          {   console.log(movie)}
+         
           {movie.map((element) => {
             return (
               <div key={element.id} className=" col-md-6 col-lg-4 col-xl-3 col-xxl-2">
