@@ -3,6 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import HEADER from './HEADER';
 import Carousel from 'react-bootstrap/Carousel';
+import four from "../assets/four.png"
+import five from "../assets/five.png"
+import six from "../assets/six.png"
 
 function TOPRATED() {
   const [movie, setMovie] = useState([]);
@@ -61,7 +64,7 @@ function TOPRATED() {
 
         <Carousel>
       <Carousel.Item>
-            <div style={{height:"700px",width:"100%", backgroundPositionY:"28%",backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(https:image.tmdb.org/t/p/original/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg`}}></div>
+         
         <Carousel.Caption>
           <h3 className='gold'>Parasite</h3>
           
@@ -69,7 +72,7 @@ function TOPRATED() {
       </Carousel.Item>
        
       <Carousel.Item>
-          <div style={{height:"700px",width:"100%",  backgroundPositionY:"20%",backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:"url(https:image.tmdb.org/t/p/original/43c1efKzA1kigNzY0HBzeoXp8LR.jpg"}}></div>
+       
         <Carousel.Caption>
           <h3 className='gold'>KPop Demon Hunters</h3>
          
@@ -77,7 +80,7 @@ function TOPRATED() {
       </Carousel.Item>
 
       <Carousel.Item>
-            <div style={{height:"700px",width:"100%",  backgroundPositionY:"12%", backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(https:image.tmdb.org/t/p/original/ow3wq89wM8qd5X7hWKxiRfsFf9C.jpg)`}}></div>
+         
              
         <Carousel.Caption>
           <h3 className='gold' >12 Angry Men</h3>

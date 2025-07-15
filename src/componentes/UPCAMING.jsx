@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import HEADER from './HEADER';
 import Carousel from 'react-bootstrap/Carousel';
 
+
 function UPCOMING() {
   const [movie, setMovie] = useState([]);
 
@@ -62,7 +63,7 @@ function handleGoToDetails(id) {
    
            <Carousel>
          <Carousel.Item>
-                   <div style={{height:"700px",width:"100%",backgroundPositionX:"80%", backgroundPositionY:"10%",backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:"url(https:image.tmdb.org/t/p/original/hwlyY7LJdEFbCPaGNXiskKKmJ5X.jpg)" }}></div>
+                
            <Carousel.Caption>
              <h3 className='gold'>Flight Risk</h3>
          
@@ -70,7 +71,7 @@ function handleGoToDetails(id) {
          </Carousel.Item>
            
          <Carousel.Item>
-             <div style={{height:"700px",width:"100%",  backgroundPositionY:"8px",backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:"url(https:image.tmdb.org/t/p/original/ktqPs5QyuF8SpKnipvVHb3fwD8d.jpg)"}}></div>
+           
            <Carousel.Caption>
              <h3 className='gold'>The Ritual</h3>
              
@@ -79,7 +80,7 @@ function handleGoToDetails(id) {
    
          <Carousel.Item>
                
-             <div style={{height:"700px",width:"100%",  backgroundPositionY:"10%", backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:"url(https:image.tmdb.org/t/p/original/aFRDH3P7TX61FVGpaLhKr6QiOC1.jpg)"}}></div>
+
            <Carousel.Caption>
             <h3 className='text-white'>Demon Slayer: Kimetsu no Yaiba Infinity Castle</h3>
     

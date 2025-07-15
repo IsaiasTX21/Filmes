@@ -3,6 +3,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from 'react-router-dom'; 
 import HEADER from './HEADER';
 import Carousel from 'react-bootstrap/Carousel';
+import one from "../assets/one.png"
+import two from "../assets/two.jpg"
+import three from "../assets/three.jpg"
 
 function Popular() {
   const [movie, setMovies] = useState([]);
@@ -60,18 +63,18 @@ fetchMovies();
 
         <Carousel>
       <Carousel.Item>
-              <div style={{height:"700px",width:"100%", backgroundPositionY:"60%",  backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:'url(https:image.tmdb.org/t/p/original/hqcexYHbiTBfDIdDWxrxPtVndBX.jpg)'}}> </div>
+              <div style={{height:"700px",width:"100%", backgroundPositionY:"60%",  backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(${one})`}}> </div>
         <Carousel.Caption>
-          <h3 className=' gold'>Thunderbolts*</h3>
+          <h3 className=' text-white'>Thunderbolts*</h3>
         
         </Carousel.Caption>
         
       </Carousel.Item>
        
       <Carousel.Item>
-           {movie[18].poster_path  ? ( <div style={{height:"700px",width:"100%", backgroundPositionY:"10%",  backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:'url(https:image.tmdb.org/t/p/original/vqBmyAj0Xm9LnS1xe1MSlMAJyHq.jpg)'}}></div>) : <p>não carregou</p>}
+           {movie[18].poster_path  ? ( <div style={{height:"700px",width:"100%", backgroundPositionY:"10%",  backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(${two})`}}></div>) : <p>não carregou</p>}
         <Carousel.Caption>
-          <h3 className='text-dark'>F1</h3>
+          <h3 className='text-white'>F1</h3>
         </Carousel.Caption>
         
       </Carousel.Item>
@@ -79,10 +82,10 @@ fetchMovies();
     
       <Carousel.Item>
 
-         {movie[15].poster_path  ? ( <div style={{height:"700px",width:"100%", backgroundPositionY:"60%",  backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:"url(https:image.tmdb.org/t/p/original/ovZasZ9EeZcp6UsrElkQ63hFCd.jpg)"}}></div>) : <p>não carregou</p>}
+         {movie[15].poster_path  ? ( <div style={{height:"700px",width:"100%", backgroundPositionY:"60%",  backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(${three})`}}></div>) : <p>não carregou</p>}
         <Carousel.Caption>
             
-              <h3 className='gold'>How to Train Your Dragon</h3>
+              <h3 className='text-white'>How to Train Your Dragon</h3>
          
         </Carousel.Caption>
       </Carousel.Item>
