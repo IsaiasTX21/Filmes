@@ -66,24 +66,28 @@ fetchMovies();
 
         <Carousel>
       <Carousel.Item>
-              {movie[6].poster_path  && ( <div style={{height:"500px",width:"100%", backgroundPositionY:"60%",  backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(https:image.tmdb.org/t/p/original${movie[6].poster_path})`}}></div>)}
+              {movie[6].poster_path  ? ( <div style={{height:"500px",width:"100%", backgroundPositionY:"60%",  backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(https:image.tmdb.org/t/p/original${movie[6].poster_path})`}}></div>) : <p>não carregou</p> }
         <Carousel.Caption>
           <h3 className=' gold'>{movie[6].title}</h3>
         
         </Carousel.Caption>
+        
       </Carousel.Item>
        
       <Carousel.Item>
-          <div style={{height:"500px",width:"100%", backgroundPositionY:"15%", backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(https:image.tmdb.org/t/p/original${movie[18].poster_path})`}}></div>
+           {movie[18].poster_path  ? ( <div style={{height:"500px",width:"100%", backgroundPositionY:"60%",  backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(https:image.tmdb.org/t/p/original${movie[18].poster_path})`}}></div>) : <p>não carregou</p>}
         <Carousel.Caption>
           <h3 className='text-dark'>{movie[18].title}</h3>
-          
         </Carousel.Caption>
+        
       </Carousel.Item>
 
+    
       <Carousel.Item>
-              <div style={{height:"500px",width:"100%",backgroundPosition:"center",backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(https:image.tmdb.org/t/p/original${movie[15].poster_path})`}}></div>
+
+         {movie[15].poster_path  ? ( <div style={{height:"500px",width:"100%", backgroundPositionY:"60%",  backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(https:image.tmdb.org/t/p/original${movie[15].poster_path})`}}></div>) : <p>não carregou</p>}
         <Carousel.Caption>
+            
               <h3 className='gold'>{movie[15].title}</h3>
          
         </Carousel.Caption>
