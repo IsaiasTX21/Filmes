@@ -66,7 +66,7 @@ fetchMovies();
 
         <Carousel>
       <Carousel.Item>
-              {movie[6].poster_path !== null && ( <div style={{height:"500px",width:"100%", backgroundPositionY:"60%",  backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(https:image.tmdb.org/t/p/original${movie[6].poster_path})`}}></div>)}
+              {movie[6].poster_path  && ( <div style={{height:"500px",width:"100%", backgroundPositionY:"60%",  backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(https:image.tmdb.org/t/p/original${movie[6].poster_path})`}}></div>)}
         <Carousel.Caption>
           <h3 className=' gold'>{movie[6].title}</h3>
         
