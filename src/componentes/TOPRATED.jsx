@@ -9,7 +9,7 @@ function TOPRATED() {
    const [loader, setloader] = useState(true)
    const navigate = useNavigate()
 
-   console.log(movie)
+
  
      function handleGoToDetails(id) {
     sessionStorage.setItem("scrollPosition", window.scrollY);  // mesma chave!
@@ -24,7 +24,6 @@ function TOPRATED() {
         sessionStorage.removeItem('scrollPosition');
       }
 
-      
     }
   }, [loader]);
 
@@ -48,7 +47,6 @@ function TOPRATED() {
   }, []);
 
 
-
   if(loader){
 
     return  <div className='bg-black min-vh-100 d-flex justify-content-center align-items-center '>  <div class=" mt-auto mb-auto spinner-border  text-warning" role="status">
@@ -65,7 +63,7 @@ function TOPRATED() {
       <Carousel.Item>
             <div style={{height:"700px",width:"100%", backgroundPositionY:"28%",backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(https:image.tmdb.org/t/p/original/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg`}}></div>
         <Carousel.Caption>
-          <h3 className='gold'>{movie[10].title}</h3>
+          <h3 className='gold'>Parasite</h3>
           
         </Carousel.Caption>
       </Carousel.Item>
@@ -73,7 +71,7 @@ function TOPRATED() {
       <Carousel.Item>
           <div style={{height:"700px",width:"100%",  backgroundPositionY:"20%",backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:"url(https:image.tmdb.org/t/p/original/43c1efKzA1kigNzY0HBzeoXp8LR.jpg"}}></div>
         <Carousel.Caption>
-          <h3 className='gold'>{movie[2].title} </h3>
+          <h3 className='gold'>KPop Demon Hunters</h3>
          
         </Carousel.Caption>
       </Carousel.Item>
@@ -82,7 +80,7 @@ function TOPRATED() {
             <div style={{height:"700px",width:"100%",  backgroundPositionY:"12%", backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(https:image.tmdb.org/t/p/original/ow3wq89wM8qd5X7hWKxiRfsFf9C.jpg)`}}></div>
              
         <Carousel.Caption>
-          <h3 className='gold' >{movie[5].title}</h3>
+          <h3 className='gold' >12 Angry Men</h3>
 
         </Carousel.Caption>
       </Carousel.Item>
@@ -94,7 +92,7 @@ function TOPRATED() {
           {movie.map((element) => {
             return (
               <div key={element.id} className=" col-md-6 col-lg-4 col-xl-3 col-xxl-2">
-                {/* Cada card */}
+            
                 <div style={{backgroundColor:"rgb(0, 0, 0)"}} className="card img-fluid justify-content-center text-center anime">
                 <img onClick={()=> handleGoToDetails(element.id)} src={`https://image.tmdb.org/t/p/w500${element.poster_path}`} className="movie card-img-top img-fluid" alt="" />
                   <div className="card-body card-space ">

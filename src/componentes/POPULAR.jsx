@@ -28,15 +28,10 @@ function Popular() {
         setLoader(false);
       }
     }
-fetchMovies();
-
-
-    
+fetchMovies(); 
   }, []);
 
-  
 
-  // Restaurar scroll após carregar os filmes
   useEffect(() => {
     if (!loader) {
       const scrollPos = sessionStorage.getItem('scrollPosition');
@@ -67,7 +62,7 @@ fetchMovies();
       <Carousel.Item>
               <div style={{height:"700px",width:"100%", backgroundPositionY:"60%",  backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:'url(https:image.tmdb.org/t/p/original/hqcexYHbiTBfDIdDWxrxPtVndBX.jpg)'}}> </div>
         <Carousel.Caption>
-          <h3 className=' gold'>{movie[6].title}</h3>
+          <h3 className=' gold'>Thunderbolts*</h3>
         
         </Carousel.Caption>
         
@@ -76,7 +71,7 @@ fetchMovies();
       <Carousel.Item>
            {movie[18].poster_path  ? ( <div style={{height:"700px",width:"100%", backgroundPositionY:"10%",  backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:'url(https:image.tmdb.org/t/p/original/vqBmyAj0Xm9LnS1xe1MSlMAJyHq.jpg)'}}></div>) : <p>não carregou</p>}
         <Carousel.Caption>
-          <h3 className='text-dark'>{movie[18].title}</h3>
+          <h3 className='text-dark'>F1</h3>
         </Carousel.Caption>
         
       </Carousel.Item>
@@ -87,7 +82,7 @@ fetchMovies();
          {movie[15].poster_path  ? ( <div style={{height:"700px",width:"100%", backgroundPositionY:"60%",  backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:"url(https:image.tmdb.org/t/p/original/ovZasZ9EeZcp6UsrElkQ63hFCd.jpg)"}}></div>) : <p>não carregou</p>}
         <Carousel.Caption>
             
-              <h3 className='gold'>{movie[15].title}</h3>
+              <h3 className='gold'>How to Train Your Dragon</h3>
          
         </Carousel.Caption>
       </Carousel.Item>
