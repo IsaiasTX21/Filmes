@@ -61,29 +61,32 @@ function TOPRATED() {
   return (
     <div className='containermovie  bg-black'> 
         <HEADER />
-
+        
         <Carousel>
       <Carousel.Item>
-         
+            <div style={{height:"700px",width:"100%", backgroundPosition:"center",
+              backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(${four})`}}> </div>
         <Carousel.Caption>
-          <h3 className='gold'>Parasite</h3>
+          <h3 className='white'>Parasite</h3>
           
         </Carousel.Caption>
       </Carousel.Item>
-       
+     
       <Carousel.Item>
-       
+       <div style={{height:"700px",width:"100%", backgroundPosition:"center",
+        backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(${five})`}}> </div>
         <Carousel.Caption>
-          <h3 className='gold'>KPop Demon Hunters</h3>
+          <h3 className='white'>KPop Demon Hunters</h3>
          
         </Carousel.Caption>
       </Carousel.Item>
 
       <Carousel.Item>
          
-             
+             <div style={{height:"700px",width:"100%", backgroundPosition:"center top",
+              backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(${six})`}}> </div>
         <Carousel.Caption>
-          <h3 className='gold' >12 Angry Men</h3>
+          <h3 className='text-white' >12 Angry Men</h3>
 
         </Carousel.Caption>
       </Carousel.Item>

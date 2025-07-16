@@ -17,10 +17,7 @@ function SEARCH() {
   }
 
   useEffect(() => {
- 
     async function search() {
-
-    
 
       try{ 
          const api = await fetch(
@@ -61,9 +58,7 @@ function SEARCH() {
     <span class="visually-hidden ">Loading...</span>
     </div>
     </div>
-      }
-
-
+   }
 
   return (
    <> 
@@ -96,7 +91,9 @@ function SEARCH() {
    
    ): <>
       <HEADER />
-   <div style={{backgroundImage:`url(${notfound})`, backgroundSize:"100%", backgroundPositionY:"10%", height:"94.5vh", backgroundRepeat:"repeat" }}    className=" d-flex justify-content-center"> </div></>}
+   <div style={{backgroundImage:`url(${notfound})`, backgroundSize:"100%", 
+    backgroundPositionY:"10%", height:"94.5vh", backgroundRepeat:"repeat" }}    
+    className=" d-flex justify-content-center"> </div></>}
       </>
    
   );

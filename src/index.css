@@ -12,13 +12,13 @@ img {
 
 }
 #mobilediv{
-width: 40%;
+width: 43%;
 justify-content: center;
 }
 
 
 input {
-  background-color: rgb(92, 89, 89) !important;
+  background-color: rgb(32, 30, 30) !important;
   width: 200px;}
 
 :root {

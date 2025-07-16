@@ -3,13 +3,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from 'react-router-dom';
 import HEADER from './HEADER';
 import Carousel from 'react-bootstrap/Carousel';
+import seven from "../assets/seven.png"
+import eight from "../assets/eight.jpg"
+import nine from "../assets/nine.jpeg"
+
 
 
 function UPCOMING() {
   const [movie, setMovie] = useState([]);
 
   const [loader, setloader] = useState(true)
-
+  
   const navigate = useNavigate()
 
 function handleGoToDetails(id) {
@@ -49,7 +53,8 @@ function handleGoToDetails(id) {
 
   if(loader){
 
-    return  <div className='bg-black min-vh-100 d-flex justify-content-center align-items-center '>  <div class=" mt-auto mb-auto spinner-border  text-warning" role="status">
+    return  <div className='bg-black min-vh-100 d-flex justify-content-center align-items-center '>
+      <div class=" mt-auto mb-auto spinner-border  text-warning" role="status">
     <span class="visually-hidden ">Loading...</span>
     </div>
     </div>
@@ -63,26 +68,29 @@ function handleGoToDetails(id) {
    
            <Carousel>
          <Carousel.Item>
-                
+            <div style={{height:"700px",width:"100%",backgroundPosition:"center", backgroundPositionY:"45%", 
+              backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(${seven})`}}> </div>
            <Carousel.Caption>
-             <h3 className='gold'>Flight Risk</h3>
+             <h3 style={{color:"#D05329"}}>Flight Risk</h3>
          
            </Carousel.Caption>
          </Carousel.Item>
            
          <Carousel.Item>
-           
+            <div style={{height:"700px",width:"100%", backgroundPositionY:"10%",  
+              backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(${eight})`}}> </div>
            <Carousel.Caption>
-             <h3 className='gold'>The Ritual</h3>
+       
              
            </Carousel.Caption>
          </Carousel.Item>
-   
+         
          <Carousel.Item>
-               
+            <div style={{height:"700px",width:"100%", backgroundPosition:"center",  
+             backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(${nine})`}}> </div>
 
            <Carousel.Caption>
-            <h3 className='text-white'>Demon Slayer: Kimetsu no Yaiba Infinity Castle</h3>
+          
     
            </Carousel.Caption>
          </Carousel.Item>

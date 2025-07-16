@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
 import HEADER from './HEADER';
 import Carousel from 'react-bootstrap/Carousel';
 import one from "../assets/one.png"
-import two from "../assets/two.jpg"
-import three from "../assets/three.jpg"
+import two from "../assets/two.png"
+import three from "../assets/three.png"
 
 function Popular() {
   const [movie, setMovies] = useState([]);
@@ -31,7 +31,7 @@ function Popular() {
         setLoader(false);
       }
     }
-fetchMovies(); 
+    fetchMovies();
   }, []);
 
 
@@ -58,60 +58,63 @@ fetchMovies();
 
   return (
     <>
-      <div  className='containermovie bg-black '>
+      <div className='containermovie bg-black '>
         <HEADER />
 
         <Carousel>
-      <Carousel.Item>
-              <div style={{height:"700px",width:"100%", backgroundPositionY:"60%",  backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(${one})`}}> </div>
-        <Carousel.Caption>
-          <h3 className=' text-white'>Thunderbolts*</h3>
-        
-        </Carousel.Caption>
-        
-      </Carousel.Item>
-       
-      <Carousel.Item>
-           {movie[18].poster_path  ? ( <div style={{height:"700px",width:"100%", backgroundPositionY:"10%",  backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(${two})`}}></div>) : <p>não carregou</p>}
-        <Carousel.Caption>
-          <h3 className='text-white'>F1</h3>
-        </Carousel.Caption>
-        
-      </Carousel.Item>
+          <Carousel.Item>
+            <div style={{ height: "700px", width: "100%", backgroundPosition: "center",
+               backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundImage: `url(${one})` }}> </div>
+            <Carousel.Caption>
+              <h3 className=' text-white'>Thunderbolts</h3>
 
-    
-      <Carousel.Item>
+            </Carousel.Caption>
 
-         {movie[15].poster_path  ? ( <div style={{height:"700px",width:"100%", backgroundPositionY:"60%",  backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(${three})`}}></div>) : <p>não carregou</p>}
-        <Carousel.Caption>
-            
-              <h3 className='text-white'>How to Train Your Dragon</h3>
-         
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
+          </Carousel.Item>
 
-      
-       
-          <div className=" row m-auto mt-5">
-            {movie.map((movie) => (
-              <div  key={movie.id}  className="col-md-6 col-lg-4 col-xl-3 col-xxl-2 ">
-                <div className=" movie  card text-center anime" style={{ backgroundColor: "rgb(0, 0, 0)" }}>
-                  <img
-                    onClick={() => handleGoToDetails(movie.id)}
-                    src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                  
-                    className="card-img-top img-fluid"
-                    alt={movie.title}
-                  />
-                  <div className="card-body">
-                    <h5 className="card-title text-white">{movie.title}</h5>
-                  </div>
+          <Carousel.Item>
+            {movie[18].poster_path ? (<div style={{ height: "700px", width: "100%", backgroundPosition: "center", 
+              backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundImage: `url(${two})` }}></div>) : <p>não carregou</p>}
+            <Carousel.Caption>
+              <h3 className='text-white'>F1</h3>
+            </Carousel.Caption>
+
+          </Carousel.Item>
+
+
+          <Carousel.Item>
+
+            {movie[15].poster_path ? (<div style={{ height: "700px", width: "100%", backgroundPosition: "center top", 
+              backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundImage: `url(${three})` }}></div>) : <p>não carregou</p>}
+            <Carousel.Caption>
+
+              <h3 className='white'>How to Train Your Dragon 2025</h3>
+
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>
+
+
+
+        <div className=" row m-auto mt-5">
+          {movie.map((movie) => (
+            <div key={movie.id} className="col-md-6 col-lg-4 col-xl-3 col-xxl-2 ">
+              <div className=" movie  card text-center anime" style={{ backgroundColor: "rgb(0, 0, 0)" }}>
+                <img
+                  onClick={() => handleGoToDetails(movie.id)}
+                  src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+
+                  className="card-img-top img-fluid"
+                  alt={movie.title}
+                />
+                <div className="card-body">
+                  <h5 className="card-title text-white">{movie.title}</h5>
                 </div>
               </div>
-            ))}
-          </div>
-     
+            </div>
+          ))}
+        </div>
+
       </div>
     </>
   );
