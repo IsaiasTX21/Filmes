@@ -3,9 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import HEADER from './HEADER';
 import Carousel from 'react-bootstrap/Carousel';
-import four from "../assets/four.png"
+import four from "../assets/four.jpg"
 import five from "../assets/five.png"
-import six from "../assets/six.png"
+import six from "../assets/six.jpg"
 
 function TOPRATED() {
   const [movie, setMovie] = useState([]);
@@ -61,35 +61,45 @@ function TOPRATED() {
   return (
     <div className='containermovie  bg-black'> 
         <HEADER />
+
+        
         
         <Carousel>
+
+                       <Carousel.Item>
+       <div className='imgcarrossel' style={{height:"27vw",width:"100%", backgroundPosition:"center",
+        backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(${five})`}}> </div>
+        <Carousel.Caption>
+          <h3 style={{color:"whitesmoke"}}>The Dark Knight</h3>
+         
+        </Carousel.Caption>
+      </Carousel.Item>
+
+           <Carousel.Item>
+       <div className='imgcarrossel' style={{height:"27vw",width:"100%", backgroundPosition:"center",
+        backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(${six})`}}> </div>
+        <Carousel.Caption>
+          <h3 style={{color:"whitesmoke"}}>KPop Demon Hunters</h3>
+         
+        </Carousel.Caption>
+      </Carousel.Item>
+          
+
+ 
+
       <Carousel.Item>
-            <div style={{height:"700px",width:"100%", backgroundPosition:"center",
+            <div className='imgcarrossel' style={{height:"27vw",width:"100%", backgroundPositionY:"22.5%",
               backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(${four})`}}> </div>
         <Carousel.Caption>
-          <h3 className='white'>Parasite</h3>
+       
           
         </Carousel.Caption>
       </Carousel.Item>
      
-      <Carousel.Item>
-       <div style={{height:"700px",width:"100%", backgroundPosition:"center",
-        backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(${five})`}}> </div>
-        <Carousel.Caption>
-          <h3 className='white'>KPop Demon Hunters</h3>
-         
-        </Carousel.Caption>
-      </Carousel.Item>
+  
 
-      <Carousel.Item>
-         
-             <div style={{height:"700px",width:"100%", backgroundPosition:"center top",
-              backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(${six})`}}> </div>
-        <Carousel.Caption>
-          <h3 className='text-white' >12 Angry Men</h3>
+ 
 
-        </Carousel.Caption>
-      </Carousel.Item>
     </Carousel>
 
   

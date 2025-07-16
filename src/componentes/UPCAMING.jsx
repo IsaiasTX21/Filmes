@@ -67,33 +67,37 @@ function handleGoToDetails(id) {
       <HEADER />
    
            <Carousel>
-         <Carousel.Item>
-            <div style={{height:"700px",width:"100%",backgroundPosition:"center", backgroundPositionY:"45%", 
-              backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(${seven})`}}> </div>
-           <Carousel.Caption>
-             <h3 style={{color:"#D05329"}}>Flight Risk</h3>
-         
-           </Carousel.Caption>
-         </Carousel.Item>
-           
-         <Carousel.Item>
-            <div style={{height:"700px",width:"100%", backgroundPositionY:"10%",  
-              backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(${eight})`}}> </div>
-           <Carousel.Caption>
-       
-             
-           </Carousel.Caption>
-         </Carousel.Item>
-         
-         <Carousel.Item>
-            <div style={{height:"700px",width:"100%", backgroundPosition:"center",  
-             backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(${nine})`}}> </div>
+
+           <Carousel.Item>
+            <div className='imgcarrossel' style={{height:"27vw",width:"100%", backgroundPosition:"center",  
+             backgroundRepeat:"no-repeat",backgroundPositionY:"44%", backgroundSize:"cover", backgroundImage:`url(${nine})`}}> </div>
 
            <Carousel.Caption>
           
     
            </Carousel.Caption>
          </Carousel.Item>
+
+   
+           
+         <Carousel.Item>
+            <div  className='imgcarrossel' style={{height:"27vw",width:"100%", backgroundPositionY:"80%",  
+              backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(${eight})`}}> </div>
+           <Carousel.Caption >
+            <h3 style={{color:"#CDCFC2"}}>The Ritual</h3>
+             
+           </Carousel.Caption>
+         </Carousel.Item>
+         
+             <Carousel.Item>
+            <div className='imgcarrossel' style={{height:"27vw",width:"100%",backgroundPosition:"center", backgroundPositionY:"45%", 
+              backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(${seven})`}}> </div>
+           <Carousel.Caption>
+             <h3 style={{color:"#BADDF9"}}>Flight Risk</h3>
+         
+           </Carousel.Caption>
+         </Carousel.Item>
+
        </Carousel>
    
      

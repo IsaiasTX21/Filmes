@@ -46,7 +46,7 @@ function HEADER() {
 
     <>
 
-      <header className=' m-0   p-0 sticky-top'>
+      <header className=' m-0 p-0 sticky-top'>
         <nav className='navbar navbar-expand-lg list-unstyled  '>
     
 
@@ -97,7 +97,7 @@ function HEADER() {
           <div  id='mobilediv' className=' d-flex  '>
 
 
-            <Offcanvas  show={show} style={{ width: '50%', background: " rgb(0, 0, 0)" }} onHide={handleClose}>
+            <Offcanvas  show={show} style={{ width: '50%', background: " rgba(0, 0, 0, 1)" }} onHide={handleClose}>
 
               <Offcanvas.Header   style={{  background: " #F4B00F", color: "red"}} closeButton  >
 
@@ -160,7 +160,7 @@ function HEADER() {
 
    
 
-            <input   type='text' className='text-white rounded-2' required onKeyDown={(e)=> Enter(e) } onChange={inputchange}/>
+            <input   type='text' className=' form text-white rounded-2' required onKeyDown={(e)=> Enter(e) } onChange={inputchange}/>
             <button id='search' className='btn btn-warning  '  onClick={searchmovie} ><img  id="searchimg" src={search} alt="search" /></button>
 
           </div>

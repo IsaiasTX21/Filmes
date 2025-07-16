@@ -5,7 +5,7 @@ import HEADER from './HEADER';
 import Carousel from 'react-bootstrap/Carousel';
 import one from "../assets/one.png"
 import two from "../assets/two.png"
-import three from "../assets/three.png"
+import three from "../assets/three.jpg"
 
 function Popular() {
   const [movie, setMovies] = useState([]);
@@ -62,8 +62,19 @@ function Popular() {
         <HEADER />
 
         <Carousel>
+
+           <Carousel.Item>
+
+            {movie[15].poster_path ? (<div className='imgcarrossel' style={{ height: "27vw", width: "100%", backgroundPosition: "center top", 
+              backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundImage: `url(${three})` }}></div>) : <p>não carregou</p>}
+            <Carousel.Caption>
+
+              <h3 className='white'>Ballerina</h3>
+
+            </Carousel.Caption>
+          </Carousel.Item>
           <Carousel.Item>
-            <div style={{ height: "700px", width: "100%", backgroundPosition: "center",
+            <div className='imgcarrossel' style={{ height: "27vw", width: "100%", backgroundPosition: "center",
                backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundImage: `url(${one})` }}> </div>
             <Carousel.Caption>
               <h3 className=' text-white'>Thunderbolts</h3>
@@ -73,7 +84,7 @@ function Popular() {
           </Carousel.Item>
 
           <Carousel.Item>
-            {movie[18].poster_path ? (<div style={{ height: "700px", width: "100%", backgroundPosition: "center", 
+            {movie[18].poster_path ? (<div className='imgcarrossel' style={{ height: "27vw", width: "100%", backgroundPosition: "center", 
               backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundImage: `url(${two})` }}></div>) : <p>não carregou</p>}
             <Carousel.Caption>
               <h3 className='text-white'>F1</h3>
@@ -82,16 +93,8 @@ function Popular() {
           </Carousel.Item>
 
 
-          <Carousel.Item>
+         
 
-            {movie[15].poster_path ? (<div style={{ height: "700px", width: "100%", backgroundPosition: "center top", 
-              backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundImage: `url(${three})` }}></div>) : <p>não carregou</p>}
-            <Carousel.Caption>
-
-              <h3 className='white'>How to Train Your Dragon 2025</h3>
-
-            </Carousel.Caption>
-          </Carousel.Item>
         </Carousel>
 
 

@@ -1,6 +1,11 @@
 * {
   margin: 0px;
   padding: 0px;
+  
+}
+
+:root{
+background-color: black !important;
 }
 
 input:focus {
@@ -12,17 +17,12 @@ img {
 
 }
 #mobilediv{
-width: 43%;
-justify-content: center;
+width: 32%;
 }
-
 
 input {
   background-color: rgb(32, 30, 30) !important;
-  width: 200px;}
-
-:root {
-  background-color: black;
+  width: 200px;
 }
 
 @keyframes animations {
@@ -76,12 +76,6 @@ color: gold;
   background-position: center;
 }
 
-.navbar {
-  background-color: rgba(0, 0, 0, 0.8) !important;
-  height: 60px;
-  ;
-
-}
 
 a {
   cursor: pointer;
@@ -97,18 +91,37 @@ a {
     animation: animations;
     animation-timeline: view();
   }
+  .navbar{
+  background-color: rgb(0, 0, 0,0.8);
+  }
 }
 
 @media screen and (width < 992px) {
-#mobilediv{
-width: 100%;
-display: flex;
-justify-content: center;
+
+ .imgcarrossel{
+height: 300px !important;
+  }
+
+ .navbar {
+
+  background-color: rgb(0, 0, 0,0) ;
+  height: 40px;
+  display: flex;
+  align-items: center !important;
+  margin: 0px !important;
+ padding: 0px !important;
+}
+ #mobilediv{
+ width: 100%;
+ background-color: rgb(0, 0, 0,0);
+ justify-content: center;
 
 }
 input{
- width: 96%;
+width: 99%;
 }
+
+
 }
 
 
