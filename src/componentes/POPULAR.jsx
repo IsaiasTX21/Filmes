@@ -102,12 +102,12 @@ function Popular() {
         <div className=" row m-auto mt-5">
           {movie.map((movie) => (
             <div key={movie.id} className="col-md-6 col-lg-4 col-xl-3 col-xxl-2 ">
-              <div className=" movie  card text-center anime" style={{ backgroundColor: "rgb(0, 0, 0)" }}>
+              <div className=" movie card text-center anime" style={{ backgroundColor: "rgb(0, 0, 0)" }}>
                 <img
                   onClick={() => handleGoToDetails(movie.id)}
                   src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
 
-                  className="card-img-top img-fluid"
+                  className="card-img-top divimg img-fluid"
                   alt={movie.title}
                 />
                 <div className="card-body">

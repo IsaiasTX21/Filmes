@@ -70,7 +70,7 @@ function GENRES() {
      
                 <div style={{backgroundColor:"rgb(0, 0, 0)"}} className="card img-fluid justify-content-center text-center anime">
                 <img onClick={()=> handleGoToDetails(element.id)} src={`https://image.tmdb.org/t/p/w500${element.poster_path}`} 
-                className="movie card-img-top im-g-fluid" alt="" /> 
+                className="movie divimg card-img-top im-g-fluid" alt="" /> 
                   <div className="card-body card-space ">
                     <h5 className="card-title text-white">{element.title}</h5>
                     <p className="card-text position-relative"> </p>

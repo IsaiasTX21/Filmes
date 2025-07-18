@@ -99,9 +99,9 @@ function HEADER() {
 
             <Offcanvas  show={show} style={{ width: '50%', background: " rgba(0, 0, 0, 1)" }} onHide={handleClose}>
 
-              <Offcanvas.Header   style={{  background: " #F4B00F", color: "red"}} closeButton  >
+              <Offcanvas.Header   style={{  background: " #d69b0fff", color: "red"}} closeButton  >
 
-                <Offcanvas.Title className=" ms-auto rounded-2 text-black" >menu</Offcanvas.Title>
+                <Offcanvas.Title className=" ms-5 rounded-2 text-black" >menu</Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body className='text-center'>
 
@@ -154,14 +154,14 @@ function HEADER() {
             </Offcanvas>
 
 
-            <Button variant=" btn btn-warning    text-center rounded-2 Menu " className='d-lg-none' onClick={handleShow}>
+            <Button variant=" btn btn-warning  ms-1  text-center rounded-2 Menu " className='d-lg-none' onClick={handleShow}>
               <MenuIcon className='d-lg-none' onClick={handleShow} />
             </Button>
 
    
 
             <input   type='text' className=' form text-white rounded-2' required onKeyDown={(e)=> Enter(e) } onChange={inputchange}/>
-            <button id='search' className='btn btn-warning  '  onClick={searchmovie} ><img  id="searchimg" src={search} alt="search" /></button>
+            <button id='search' className='btn btn-warning me-1  '  onClick={searchmovie} ><img  id="searchimg" src={search} alt="search" /></button>
 
           </div>
 
