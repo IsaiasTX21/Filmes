@@ -3,8 +3,6 @@ import { useEffect, useState } from "react";
 import { useParams, useNavigate} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
-
 function GENRES() {
   const [movie, setMovie] = useState([]);
   const { id } = useParams();

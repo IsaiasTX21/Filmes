@@ -101,7 +101,7 @@ function HEADER() {
 
               <Offcanvas.Header   style={{  background: " #d69b0fff", color: "red"}} closeButton  >
 
-                <Offcanvas.Title className=" ms-5 rounded-2 text-black" >menu</Offcanvas.Title>
+                <Offcanvas.Title className=" ms-auto rounded-2 text-black" >menu</Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body className='text-center'>
 
