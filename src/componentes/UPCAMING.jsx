@@ -6,6 +6,8 @@ import Carousel from 'react-bootstrap/Carousel';
 import seven from "../assets/seven.png"
 import eight from "../assets/eight.jpg"
 import nine from "../assets/nine.jpeg"
+import { GrNext } from "react-icons/gr";
+import { GrPrevious } from "react-icons/gr";
 
 
 
@@ -66,7 +68,7 @@ function handleGoToDetails(id) {
 
       <HEADER />
    
-           <Carousel>
+           <Carousel  prevIcon={<GrPrevious/>} nextIcon={<GrNext />}>
 
            <Carousel.Item>
             <div className='imgcarrossel' style={{height:"27vw",width:"100%", backgroundPosition:"center",  

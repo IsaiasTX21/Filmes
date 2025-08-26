@@ -7,6 +7,9 @@ import four from "../assets/four.jpg"
 import five from "../assets/five.png"
 import six from "../assets/six.jpg"
 
+import { GrNext } from "react-icons/gr";
+import { GrPrevious } from "react-icons/gr";
+
 function TOPRATED() {
   const [movie, setMovie] = useState([]);
    const [loader, setloader] = useState(true)
@@ -64,7 +67,7 @@ function TOPRATED() {
 
         
         
-        <Carousel>
+        <Carousel prevIcon={<GrPrevious/>} nextIcon={<GrNext />}>
 
                        <Carousel.Item>
        <div className='imgcarrossel' style={{height:"27vw",width:"100%", backgroundPosition:"center",

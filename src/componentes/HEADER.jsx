@@ -8,6 +8,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import movie from "../assets/movie.png"
 import search from "../assets/search.png"
 
+
 function HEADER() {
 
   const [show, setShow] = useState(false);
@@ -99,7 +100,7 @@ function HEADER() {
 
             <Offcanvas  show={show} style={{ width: '50%', background: " rgba(0, 0, 0, 1)" }} onHide={handleClose}>
 
-              <Offcanvas.Header   style={{  background: " #d69b0fff", color: "red"}} closeButton  >
+              <Offcanvas.Header   style={{ background: " #d69b0fff", color: "red"}} closeButton  >
 
                 <Offcanvas.Title className=" ms-auto rounded-2 text-black" >menu</Offcanvas.Title>
               </Offcanvas.Header>

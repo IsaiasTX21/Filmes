@@ -6,6 +6,8 @@ import Carousel from 'react-bootstrap/Carousel';
 import one from "../assets/one.png"
 import two from "../assets/two.png"
 import three from "../assets/three.jpg"
+import { GrNext } from "react-icons/gr";
+import { GrPrevious } from "react-icons/gr";
 
 function Popular() {
   const [movie, setMovies] = useState([]);
@@ -61,9 +63,9 @@ function Popular() {
       <div className='containermovie bg-black '>
         <HEADER />
 
-        <Carousel>
+        <Carousel  prevIcon={<GrPrevious/>} nextIcon={<GrNext />}  >
 
-           <Carousel.Item>
+           <Carousel.Item >
 
             {movie[15].poster_path ? (<div className='imgcarrossel' style={{ height: "27vw", width: "100%", backgroundPosition: "center top", 
               backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundImage: `url(${three})` }}></div>) : <p>não carregou</p>}

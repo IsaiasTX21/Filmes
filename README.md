@@ -1,8 +1,24 @@
-# React + Vite
+# 🎬 Projeto Catálogo de Filmes com TMDB API
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é uma aplicação que consome a [API do TMDB (The Movie Database)](https://www.themoviedb.org/documentation/api), exibindo informações como filmes populares, pesquisa por títulos, detalhes dos filmes, e muito mais.
 
-Currently, two official plugins are available:
+Ideal para estudos de consumo de API REST, interface com dados reais e desenvolvimento de interfaces modernas.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## 🛠️ Tecnologias Utilizadas
+
+> **Html 5 , Css 3 , Javascript , React , Boostrap 5 e API do TMDB The Movie Database .**
+---
+
+## 🚀 Funcionalidades
+
+- 🎞️ Listagem de filmes populares
+- 🔍 Busca de filmes por título
+- 📄 Detalhes completos do filme
+- 📅 Filtros por ano de lançamento e gênero
+- ⭐ Visualização da nota dos usuários
+- 📱 Layout responsivo
+
+---
+
+
