@@ -94,13 +94,7 @@ function Popular() {
 
           </Carousel.Item>
 
-
-         
-
         </Carousel>
-
-
-
         <div className=" row m-auto mt-5">
           {movie.map((movie) => (
             <div key={movie.id} className="col-md-6 col-lg-4 col-xl-3 col-xxl-2 ">
@@ -108,9 +102,9 @@ function Popular() {
                 <img
                   onClick={() => handleGoToDetails(movie.id)}
                   src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-
-                  className="card-img-top divimg img-fluid"
+                  className="card-img-top  divimg img-fluid"
                   alt={movie.title}
+                  style={{cursor:"pointer"}}
                 />
                 <div className="card-body">
                   <h5 className="card-title text-white">{movie.title}</h5>

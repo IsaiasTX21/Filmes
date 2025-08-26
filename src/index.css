@@ -18,12 +18,13 @@ background-color: black !important;
 }
 
 .carousel-control-prev{
-font-size: 60px !important;
+
+display: none !important;
 
 }
 
 .carousel-control-next{
-font-size: 60px !important;
+display: none !important;
 }
 
 input:focus {
