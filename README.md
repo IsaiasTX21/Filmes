@@ -7,8 +7,13 @@ Ideal para estudos de consumo de API REST, interface com dados reais e desenvolv
 
 ## 🛠️ Tecnologias Utilizadas
 
-> **Html 5 , Css 3 , Javascript , React , Boostrap 5 e API do TMDB The Movie Database .**
----
+> **Html 5 , Css 3 , Javascript , React , Boostrap 5 e API do TMDB The Movie Database.**
+
+
+## Demonstração do projeto de filmes.
+> [Acesse o link aqui](https://movie-12i6.vercel.app/)
+
+
 
 ## 🚀 Funcionalidades
 
