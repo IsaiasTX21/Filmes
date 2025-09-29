@@ -68,7 +68,7 @@ function Popular() {
 
            <Carousel.Item >
 
-            {movie[15].poster_path ? (<a href='https://movie-12i6-546x5ta4l-isaias-projects-00c8c77d.vercel.app/Details/541671'><div className='imgcarrossel' style={{ height: "27vw", width: "100%", backgroundPosition: "center top", 
+            {movie[15].poster_path ? (<a href='/Details/541671'><div className='imgcarrossel' style={{ height: "27vw", width: "100%", backgroundPosition: "center top", 
               backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundImage: `url(${three})` }}></div></a>) : <p>não carregou</p>}
             <Carousel.Caption>
 
@@ -79,7 +79,7 @@ function Popular() {
           </Carousel.Item>
 
           <Carousel.Item>
-            <a href='https://movie-12i6-546x5ta4l-isaias-projects-00c8c77d.vercel.app/Details/986056'><div className='imgcarrossel' style={{ height: "27vw", width: "100%", backgroundPosition: "center",
+            <a href='/Details/986056'><div className='imgcarrossel' style={{ height: "27vw", width: "100%", backgroundPosition: "center",
                backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundImage: `url(${one})` }}> </div></a>
             <Carousel.Caption>
               <h3 className=' text-white'>Thunderbolts</h3>
@@ -89,7 +89,7 @@ function Popular() {
           </Carousel.Item>
 
           <Carousel.Item>
-            {movie[18].poster_path ? (<a href='https://movie-12i6-546x5ta4l-isaias-projects-00c8c77d.vercel.app/Details/911430'><div className='imgcarrossel' style={{ height: "27vw", width: "100%", backgroundPosition: "center", 
+            {movie[18].poster_path ? (<a href='/Details/911430'><div className='imgcarrossel' style={{ height: "27vw", width: "100%", backgroundPosition: "center", 
               backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundImage: `url(${two})` }}></div></a>) : <p>não carregou</p>}
             <Carousel.Caption>
               <h3 className='text-white'>F1</h3>

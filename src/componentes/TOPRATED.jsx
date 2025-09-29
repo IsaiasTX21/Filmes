@@ -68,7 +68,7 @@ function TOPRATED() {
         <Carousel interval={2000} prevIcon={<GrPrevious/>} nextIcon={<GrNext />}>
        
        <Carousel.Item>
-      <a href='https://movie-12i6-546x5ta4l-isaias-projects-00c8c77d.vercel.app/Details/803796'> <div className='imgcarrossel' style={{height:"27vw",width:"100%", backgroundPosition:"center",
+      <a href='/Details/803796'> <div className='imgcarrossel' style={{height:"27vw",width:"100%", backgroundPosition:"center",
         backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(${five})`}}> </div></a>
         <Carousel.Caption>
            <h3 style={{color:"whitesmoke"}}>KPop Demon Hunters</h3>
@@ -77,7 +77,7 @@ function TOPRATED() {
       </Carousel.Item>
 
            <Carousel.Item>
-      <a href='https://movie-12i6-546x5ta4l-isaias-projects-00c8c77d.vercel.app/Details/155'><div className='imgcarrossel' style={{height:"27vw",width:"100%", backgroundPosition:"center",
+      <a href='/Details/155'><div className='imgcarrossel' style={{height:"27vw",width:"100%", backgroundPosition:"center",
         backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(${six})`}}> </div> </a>
         <Carousel.Caption>
                  <h3 style={{color:"whitesmoke"}}>The Dark Knight</h3>
@@ -87,7 +87,7 @@ function TOPRATED() {
         
 
       <Carousel.Item>
-          <a href='https://movie-12i6-546x5ta4l-isaias-projects-00c8c77d.vercel.app/Details/429'> <div className='imgcarrossel' style={{height:"27vw",width:"100%", backgroundPositionY:"22.5%",
+          <a href='/Details/429'> <div className='imgcarrossel' style={{height:"27vw",width:"100%", backgroundPositionY:"22.5%",
               backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(${four})`}}> </div> </a>
         <Carousel.Caption>
        
