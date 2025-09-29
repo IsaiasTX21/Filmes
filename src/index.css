@@ -19,12 +19,12 @@ background-color: black !important;
 
 .carousel-control-prev{
 
-display: none !important;
+  font-size: 30px !important;
 
 }
 
 .carousel-control-next{
-display: none !important;
+  font-size: 30px !important;
 }
 
 input:focus {

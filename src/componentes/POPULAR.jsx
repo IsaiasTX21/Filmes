@@ -9,6 +9,7 @@ import three from "../assets/three.jpg"
 import { GrNext } from "react-icons/gr";
 import { GrPrevious } from "react-icons/gr";
 
+
 function Popular() {
   const [movie, setMovies] = useState([]);
   const [loader, setLoader] = useState(true);
@@ -63,21 +64,23 @@ function Popular() {
       <div className='containermovie bg-black '>
         <HEADER />
 
-        <Carousel  prevIcon={<GrPrevious/>} nextIcon={<GrNext />}  >
+        <Carousel interval={2000} prevIcon={<GrPrevious/>} nextIcon={<GrNext />}  >
 
            <Carousel.Item >
 
-            {movie[15].poster_path ? (<div className='imgcarrossel' style={{ height: "27vw", width: "100%", backgroundPosition: "center top", 
-              backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundImage: `url(${three})` }}></div>) : <p>não carregou</p>}
+            {movie[15].poster_path ? (<a href='https://movie-12i6-546x5ta4l-isaias-projects-00c8c77d.vercel.app/Details/541671'><div className='imgcarrossel' style={{ height: "27vw", width: "100%", backgroundPosition: "center top", 
+              backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundImage: `url(${three})` }}></div></a>) : <p>não carregou</p>}
             <Carousel.Caption>
 
               <h3 className='white'>Ballerina</h3>
+  
 
             </Carousel.Caption>
           </Carousel.Item>
+
           <Carousel.Item>
-            <div className='imgcarrossel' style={{ height: "27vw", width: "100%", backgroundPosition: "center",
-               backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundImage: `url(${one})` }}> </div>
+            <a href='https://movie-12i6-546x5ta4l-isaias-projects-00c8c77d.vercel.app/Details/986056'><div className='imgcarrossel' style={{ height: "27vw", width: "100%", backgroundPosition: "center",
+               backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundImage: `url(${one})` }}> </div></a>
             <Carousel.Caption>
               <h3 className=' text-white'>Thunderbolts</h3>
 
@@ -86,8 +89,8 @@ function Popular() {
           </Carousel.Item>
 
           <Carousel.Item>
-            {movie[18].poster_path ? (<div className='imgcarrossel' style={{ height: "27vw", width: "100%", backgroundPosition: "center", 
-              backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundImage: `url(${two})` }}></div>) : <p>não carregou</p>}
+            {movie[18].poster_path ? (<a href='https://movie-12i6-546x5ta4l-isaias-projects-00c8c77d.vercel.app/Details/911430'><div className='imgcarrossel' style={{ height: "27vw", width: "100%", backgroundPosition: "center", 
+              backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundImage: `url(${two})` }}></div></a>) : <p>não carregou</p>}
             <Carousel.Caption>
               <h3 className='text-white'>F1</h3>
             </Carousel.Caption>

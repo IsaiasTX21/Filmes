@@ -68,23 +68,20 @@ function handleGoToDetails(id) {
 
       <HEADER />
    
-           <Carousel  prevIcon={<GrPrevious/>} nextIcon={<GrNext />}>
+           <Carousel interval={2000}  prevIcon={<GrPrevious/>} nextIcon={<GrNext />}>
 
            <Carousel.Item>
-            <div className='imgcarrossel' style={{height:"27vw",width:"100%", backgroundPosition:"center",  
-             backgroundRepeat:"no-repeat",backgroundPositionY:"44%", backgroundSize:"cover", backgroundImage:`url(${nine})`}}> </div>
+            <a href='https://movie-12i6-546x5ta4l-isaias-projects-00c8c77d.vercel.app/Details/1311031'> <div className='imgcarrossel' style={{height:"27vw",width:"100%", backgroundPosition:"center",  
+             backgroundRepeat:"no-repeat",backgroundPositionY:"44%", backgroundSize:"cover", backgroundImage:`url(${nine})`}}> </div></a>
 
            <Carousel.Caption>
-          
     
            </Carousel.Caption>
          </Carousel.Item>
 
-   
-           
          <Carousel.Item>
-            <div  className='imgcarrossel' style={{height:"27vw",width:"100%", backgroundPositionY:"80%",  
-              backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(${eight})`}}> </div>
+            <a href='https://movie-12i6-546x5ta4l-isaias-projects-00c8c77d.vercel.app/Details/1278950'> <div  className='imgcarrossel' style={{height:"27vw",width:"100%", backgroundPositionY:"80%",  
+              backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(${eight})`}}> </div></a>
            <Carousel.Caption >
             <h3 style={{color:"#CDCFC2"}}>The Ritual</h3>
              
@@ -92,8 +89,8 @@ function handleGoToDetails(id) {
          </Carousel.Item>
          
              <Carousel.Item>
-            <div className='imgcarrossel' style={{height:"27vw",width:"100%",backgroundPosition:"center", backgroundPositionY:"45%", 
-              backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(${seven})`}}> </div>
+            <a href='https://movie-12i6-546x5ta4l-isaias-projects-00c8c77d.vercel.app/Details/1126166'> <div className='imgcarrossel' style={{height:"27vw",width:"100%",backgroundPosition:"center", backgroundPositionY:"45%", 
+              backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundImage:`url(${seven})`}}> </div></a>
            <Carousel.Caption>
              <h3 style={{color:"#BADDF9"}}>Flight Risk</h3>
          
