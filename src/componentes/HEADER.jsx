@@ -45,9 +45,8 @@ function HEADER() {
           <div className=" collapse navbar-collapse " >
             <ul className="navbar-nav  ">
 
-          
-                <img id='movie' src={movie}></img>
-          
+             <img id='movie' src={movie}></img>
+
               <li className="nav-item  ms-3 ">
                 <a onClick={() => navigate("/")} className="nav-link " >HOME</a>
               </li>
@@ -87,7 +86,7 @@ function HEADER() {
                 <ul className="navbar-nav p-0 m-0 ">
 
                   <li className="nav-item">
-                    <a onClick={() => { return navigate(`/`), setShow(false) }} className="nav-link text-white me-4" >POPULAR</a>
+                    <a onClick={() => { return navigate(`/`), setShow(false) }} className="nav-link text-white me-4" >HOME</a>
                   </li>
 
                   <li className="nav-item">
