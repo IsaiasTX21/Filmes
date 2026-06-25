@@ -124,7 +124,7 @@ function Popular() {
 
 
                 <div className="  card-body ">
-                  <h2 className=" card-title p-0 m-0 h5 text-white">{movie.title}</h2>
+                  <h2 className=" card-title p-0 m-0 h6 text-white">{movie.title}</h2>
                   <Rating
                     name="half-rating-read"
                     value={movie.vote_average / 2}

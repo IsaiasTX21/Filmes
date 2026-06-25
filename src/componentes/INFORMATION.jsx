@@ -104,11 +104,11 @@ function DETAILS() {
         </button>
         <div className='info'>
 
-          <h2 id='title' className=' h5 text-warning'>{movies.title}</h2>
+          <h2 id='title' className=' h6 text-warning'>{movies.title}</h2>
           <p className="card-text text-white">{movies.overview}</p>
 
           <p>Country: {renderCountries()}</p>
-          <p>Genres: {renderGenres()}</p>
+          <div   className='gender'>   {renderGenres()}</div>
           <Rating
             className='stars'
             name="half-rating-read"

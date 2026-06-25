@@ -1,20 +1,20 @@
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import POPULAR from './componentes/POPULAR';
+import HOME from './componentes/HOME';
 import SEARCH from './componentes/SEARCH';
 import DETAILS from './componentes/INFORMATION';
 import TOPRATED from './componentes/TOPRATED';
 import UPCOMING from './componentes/UPCAMING';
-import GENRES from './componentes/GENRES';
+import GENDERS from './componentes/GENDERS';
 
 function App() {
   return (
     <BrowserRouter>
   
       <Routes>
-        <Route path='' element={<POPULAR />} />
-        <Route path='Genres/:id' element={<GENRES />} />
+        <Route path='' element={<HOME />} />
+        <Route path='Genres/:id' element={<GENDERS />} />
         <Route path='Search/:moviesearch' element={<SEARCH />} />
         <Route path='TopRated' element={<TOPRATED />} />
         <Route path='Upcoming' element={<UPCOMING />} />

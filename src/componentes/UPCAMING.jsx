@@ -114,7 +114,7 @@ function UPCOMING() {
               <div style={{ backgroundColor: "rgb(0, 0, 0)" }} className="movie  card img-fluid justify-content-center text-center anime">
                 <img style={{ cursor: "pointer" }} onClick={() => handleGoToDetails(movie.id)} src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} className="movie divimg card-img-top im-g-fluid" alt="" />
                 <div className="card-body  ">
-                  <h2 className="card-title h5 text-white">{movie.title}</h2>
+                  <h2 className="card-title h6 text-white">{movie.title}</h2>
                   <p className="card-text position-relative"> </p>
 
                   <Rating

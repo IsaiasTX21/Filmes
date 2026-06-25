@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { PageItem } from "react-bootstrap";
 import { Rating } from '@mui/material';
 
-function GENRES() {
+function GENDERS() {
   const [movie, setMovie] = useState([]);
   const { id } = useParams();
    const [loader, setloader] = useState(true)
@@ -74,7 +74,7 @@ function GENRES() {
                 <img style={{cursor:"pointer"}} onClick={()=> handleGoToDetails(movie.id)} src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} 
                 className="movie divimg card-img-top im-g-fluid" alt="" /> 
                   <div className="card-body  ">
-                    <h2 className="card-title h5 text-white">{movie.title}</h2>
+                    <h2 className="card-title h6 text-white">{movie.title}</h2>
                       <Rating               name="half-rating-read"
                 value={movie.vote_average / 2}
                 readOnly />
@@ -94,4 +94,4 @@ function GENRES() {
   );
 }
 
-export default GENRES;
+export default GENDERS;

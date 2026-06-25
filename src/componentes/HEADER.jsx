@@ -41,34 +41,34 @@ function HEADER() {
 
     <>
       <header className=' m-0 p-0 sticky-top'>
-        <nav className='navbar navbar-expand-sm list-unstyled  '>
+        <nav  className='navbar navbar-expand-sm list-unstyled  '>
           <div className=" collapse navbar-collapse " >
             <ul className="navbar-nav  ">
 
-              <li className="nav-item" >
+          
                 <img id='movie' src={movie}></img>
-              </li>
+          
               <li className="nav-item  ms-3 ">
-                <a onClick={() => navigate("/")} className="nav-link text-white" >POPULAR </a>
+                <a onClick={() => navigate("/")} className="nav-link " >HOME</a>
               </li>
               <li className="nav-item ">
-                <a onClick={() => navigate(`/TopRated`)} className="nav-link text-white   ">TOP RATED</a>
+                <a onClick={() => navigate(`/TopRated`)} className="nav-link   ">TOP RATED</a>
               </li>
               <li className="nav-item">
-                <a onClick={() => navigate(`/Upcoming`)} className="nav-link text-white " >UP COMING</a>
+                <a onClick={() => navigate(`/Upcoming`)} className="nav-link " >UP COMING</a>
               </li>
               <li className='nav-item'>
               </li>
             </ul>
             <div>
               <input type='text' className=' text-white ' required onKeyDown={(e) => Enter(e)} onChange={inputchange} />
-              <button id='search-icon' className='btn btn-warning search ' onClick={searchmovie} ><img id="searching" src={search} alt="search" /></button>
+              <button id='search-icon' className='btn  search ' onClick={searchmovie} ><img id="searching" src={search} alt="search" /></button>
             </div>
           </div>
 
           <div className=' d-flex w-100  d-sm-none '>
 
-            <Button variant=" btn btn-warning text-center rounded-2 Menu "
+            <Button variant=" btn text-center rounded-2 Menu "
               className='d-lg-none' onClick={handleShow}>
               <MenuIcon className='d-lg-none' onClick={handleShow} />
             </Button>
