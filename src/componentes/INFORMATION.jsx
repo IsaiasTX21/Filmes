@@ -6,7 +6,7 @@ import { Rating } from '@mui/material';
 function DETAILS() {
   const [movies, setMovies] = useState([]);
   const [loader, setLoader] = useState(true);
-   const [posterload, setposter] = useState(true)
+  const [posterload, setposter] = useState(true)
   const [imageLoaded, setImageLoaded] = useState(false); // Novo estado
   const navegate = useNavigate()
 
@@ -21,7 +21,7 @@ function DETAILS() {
 
 
       const backdrop = new Image();
-       backdrop.src = `https://image.tmdb.org/t/p/w1280${data.backdrop_path}`;
+      backdrop.src = `https://image.tmdb.org/t/p/w1280${data.backdrop_path}`;
 
       if (data.backdrop_path === null) {
         return setLoader(false)
@@ -33,11 +33,11 @@ function DETAILS() {
       };
 
       const poster = new Image();
-       poster.src = `https://image.tmdb.org/t/p/w1280${data.poster_path}`;
+      poster.src = `https://image.tmdb.org/t/p/w1280${data.poster_path}`;
 
-        poster.onload = () => {
+      poster.onload = () => {
         setImageLoaded(true);
-        setTimeout(() =>  setposter(false), 500); // Delay suave
+        setTimeout(() => setposter(false), 500); // Delay suave
       };
 
     } catch (error) {
@@ -51,10 +51,10 @@ function DETAILS() {
 
   }, []);
 
-  if (loader && posterload) {
+  if (loader || posterload) {
     return (
       <div className="bg-black min-vh-100 d-flex align-items-center justify-content-center">
-        <div className="text-warning" >
+        <div className="text-white" >
           <span >Loading...</span>
         </div>
       </div>
@@ -73,7 +73,7 @@ function DETAILS() {
   const renderGenres = () => {
     if (movies.genres) {
       return movies.genres.map((genre, index) => (
-        <span className="me-2" key={index}>{genre.name}{index < movies.genres.length - 1 && ', '}</span>
+        <span className="me-2 " key={index}>{genre.name}{index < movies.genres.length - 1 && ','}</span>
       ));
     }
     return "Informação não disponível";
@@ -94,30 +94,30 @@ function DETAILS() {
         minHeight: "100dvh"
       }}
     >
-  
-          <div className="position-relative container-info">
-            
 
-           <img id='poster' style={{ borderRadius:"10px"}} src={ imageLoaded ? `https://image.tmdb.org/t/p/w1280${movies.poster_path}` : 'none'} alt="foto" />
-                          <button  style={{backgroundColor:"red"}} className="   exit  text-light ms-auto me-auto " onClick={handleGoBack}>
-                X
-              </button>
-            <div className='info'> 
-              
-              <h5 id='title' style={{ color: "#f0d08b" }}>{movies.title}</h5>
-              <p className="card-text text-white">{movies.overview}</p>
+      <div className="position-relative container-info">
 
-              <p><span style={{ color: "#f0d08b" }}>Country</span>: {renderCountries()}</p>
-              <p><span style={{ color: "#f0d08b" }}>Genres</span>: {renderGenres()}</p>
-                  <Rating 
-                className='stars'
-                name="half-rating-read"
-                value={movies.vote_average / 2}
-                readOnly
-              />
-              </div>
+
+        <img id='poster' style={{ borderRadius: "10px" }} src={imageLoaded ? `https://image.tmdb.org/t/p/w1280${movies.poster_path}` : 'none'} alt="foto" />
+        <button style={{ backgroundColor: "red" }} className="   exit  text-light ms-auto me-auto " onClick={handleGoBack}>
+          X
+        </button>
+        <div className='info'>
+
+          <h2 id='title' className=' h5 text-warning'>{movies.title}</h2>
+          <p className="card-text text-white">{movies.overview}</p>
+
+          <p>Country: {renderCountries()}</p>
+          <p>Genres: {renderGenres()}</p>
+          <Rating
+            className='stars'
+            name="half-rating-read"
+            value={movies.vote_average / 2}
+            readOnly
+          />
         </div>
-      
+      </div>
+
     </div>
   );
 }

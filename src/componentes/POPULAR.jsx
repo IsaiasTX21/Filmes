@@ -29,8 +29,8 @@ function Popular() {
         const response = await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${import.meta.env.VITE_API_KEY}`);
         const data = await response.json();
         setMovies(data.results);
-      
-       
+
+
       } catch (error) {
         console.error("Erro ao buscar filmes:", error);
       } finally {
@@ -54,13 +54,13 @@ function Popular() {
   if (loader) {
     return (
       <div className='bg-black min-vh-100 d-flex justify-content-center align-items-center'>
-         <div className="text-warning" >
+        <div className="text-white"  >
           <span >Loading...</span>
         </div>
       </div>
     );
   }
-      
+
 
 
   return (
@@ -68,23 +68,27 @@ function Popular() {
       <div className='containermovie bg-black '>
         <HEADER />
 
-        <Carousel interval={2000} prevIcon={<GrPrevious/>} nextIcon={<GrNext />}  >
+        <Carousel interval={2000} prevIcon={<GrPrevious />} nextIcon={<GrNext />}  >
 
-           <Carousel.Item >
+          <Carousel.Item >
 
-            {movie[15].poster_path ? (<a href='/Details/541671'><div className='imgcarrossel' style={{ height: "27vw", width: "100%", backgroundPosition: "center top", 
-              backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundImage: `url(${three})` }}></div></a>) : <p>não carregou</p>}
+            {movie[15].poster_path ? (<a href='/Details/541671'><div className='imgcarrossel' style={{
+              height: "27vw", width: "100%", backgroundPosition: "center top",
+              backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundImage: `url(${three})`
+            }}></div></a>) : <p>não carregou</p>}
             <Carousel.Caption>
 
               <h3 className='white'>Ballerina</h3>
-  
+
 
             </Carousel.Caption>
           </Carousel.Item>
 
           <Carousel.Item>
-            <a href='/Details/986056'><div className='imgcarrossel' style={{ height: "27vw", width: "100%", backgroundPosition: "center",
-               backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundImage: `url(${one})` }}> </div></a>
+            <a href='/Details/986056'><div className='imgcarrossel' style={{
+              height: "27vw", width: "100%", backgroundPosition: "center",
+              backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundImage: `url(${one})`
+            }}> </div></a>
             <Carousel.Caption>
               <h3 className=' text-white'>Thunderbolts</h3>
 
@@ -93,8 +97,10 @@ function Popular() {
           </Carousel.Item>
 
           <Carousel.Item>
-            {movie[18].poster_path ? (<a href='/Details/911430'><div className='imgcarrossel' style={{ height: "27vw", width: "100%", backgroundPosition: "center", 
-              backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundImage: `url(${two})` }}></div></a>) : <p>não carregou</p>}
+            {movie[18].poster_path ? (<a href='/Details/911430'><div className='imgcarrossel' style={{
+              height: "27vw", width: "100%", backgroundPosition: "center",
+              backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundImage: `url(${two})`
+            }}></div></a>) : <p>não carregou</p>}
             <Carousel.Caption>
               <h3 className='text-white'>F1</h3>
             </Carousel.Caption>
@@ -106,24 +112,24 @@ function Popular() {
           {movie.map((movie) => (
             <div key={movie.id} className=" col-6 col-sm-4 col-md-4 col-lg-4 col-xl-3 col-xxl-2 ">
               <div className=" movie card text-center anime" style={{ backgroundColor: "rgb(0, 0, 0)" }}>
-                
-                
+
+
                 <img
                   onClick={() => handleGoToDetails(movie.id)}
                   src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                   className="card-img-top  divimg img-fluid"
-                  alt={movie.title}  
-                  style={{cursor:"pointer"}}
+                  alt={movie.title}
+                  style={{ cursor: "pointer" }}
                 />
-                    
+
 
                 <div className="  card-body ">
-                  <h5 className="card-title  text-white">{movie.title}</h5>
-                         <Rating 
-                name="half-rating-read"
-                value={movie.vote_average / 2}
-                readOnly
-              />
+                  <h2 className=" card-title p-0 m-0 h5 text-white">{movie.title}</h2>
+                  <Rating
+                    name="half-rating-read"
+                    value={movie.vote_average / 2}
+                    readOnly
+                  />
                 </div>
               </div>
             </div>

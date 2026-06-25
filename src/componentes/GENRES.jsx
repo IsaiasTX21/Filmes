@@ -52,7 +52,7 @@ function GENRES() {
   if(loader){
 
     return  <div className='bg-black min-vh-100 d-flex justify-content-center align-items-center '> 
-            <div className=" text-warning" >
+            <div className="text-white" >
           <span >Loading...</span>
         </div>
     </div>
@@ -73,8 +73,8 @@ function GENRES() {
                 <div style={{backgroundColor:"rgb(0, 0, 0)"}} className="card img-fluid justify-content-center text-center anime">
                 <img style={{cursor:"pointer"}} onClick={()=> handleGoToDetails(movie.id)} src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} 
                 className="movie divimg card-img-top im-g-fluid" alt="" /> 
-                  <div className="card-body card-space ">
-                    <h5 className="card-title text-white">{movie.title}</h5>
+                  <div className="card-body  ">
+                    <h2 className="card-title h5 text-white">{movie.title}</h2>
                       <Rating               name="half-rating-read"
                 value={movie.vote_average / 2}
                 readOnly />

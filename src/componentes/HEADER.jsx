@@ -40,7 +40,6 @@ function HEADER() {
   return (
 
     <>
-
       <header className=' m-0 p-0 sticky-top'>
         <nav className='navbar navbar-expand-sm list-unstyled  '>
           <div className=" collapse navbar-collapse " >
@@ -69,7 +68,7 @@ function HEADER() {
 
           <div className=' d-flex w-100  d-sm-none '>
 
-            <Button variant=" btn btn-warning   text-center rounded-2 Menu "
+            <Button variant=" btn btn-warning text-center rounded-2 Menu "
               className='d-lg-none' onClick={handleShow}>
               <MenuIcon className='d-lg-none' onClick={handleShow} />
             </Button>
@@ -127,17 +126,11 @@ function HEADER() {
                   <li className="nav-item">
                     <a onClick={() => { return navigate(`/Genres/27`), setShow(false) }} className="nav-link text-white me-4" >HORROR</a>
                   </li>
-
                 </ul>
-
-
               </Offcanvas.Body>
             </Offcanvas>
           </div>
         </nav>
-
-
-
 
       </header>
     </>
