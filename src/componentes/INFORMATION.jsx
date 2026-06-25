@@ -2,13 +2,15 @@ import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Rating } from '@mui/material';
 
+
 function DETAILS() {
   const [movies, setMovies] = useState([]);
   const [loader, setLoader] = useState(true);
+   const [posterload, setposter] = useState(true)
   const [imageLoaded, setImageLoaded] = useState(false); // Novo estado
-const navegate = useNavigate()
+  const navegate = useNavigate()
 
-  
+
   const { id } = useParams();
 
   async function api() {
@@ -16,19 +18,28 @@ const navegate = useNavigate()
       const response = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${import.meta.env.VITE_API_KEY}`);
       const data = await response.json();
       setMovies(data);
-      console.log(movies)
-      
-      const img = new Image();
-      img.src = `https://image.tmdb.org/t/p/w1280${data.backdrop_path}`;
-        
-      if(data.backdrop_path === null){
+
+
+      const backdrop = new Image();
+       backdrop.src = `https://image.tmdb.org/t/p/w1280${data.backdrop_path}`;
+
+      if (data.backdrop_path === null) {
         return setLoader(false)
       }
-      img.onload = () => {
+      backdrop.onload = () => {
         setImageLoaded(true);
         setTimeout(() => setLoader(false), 500); // Delay suave
-        
+
       };
+
+      const poster = new Image();
+       poster.src = `https://image.tmdb.org/t/p/w1280${data.poster_path}`;
+
+        poster.onload = () => {
+        setImageLoaded(true);
+        setTimeout(() =>  setposter(false), 500); // Delay suave
+      };
+
     } catch (error) {
       console.error("Erro ao carregar detalhes:", error);
       setLoader(false);
@@ -40,11 +51,11 @@ const navegate = useNavigate()
 
   }, []);
 
-  if (loader) {
+  if (loader && posterload) {
     return (
       <div className="bg-black min-vh-100 d-flex align-items-center justify-content-center">
-        <div className="spinner-border text-warning" role="status">
-          <span className="visually-hidden">Loading...</span>
+        <div className="text-warning" >
+          <span >Loading...</span>
         </div>
       </div>
     );
@@ -80,31 +91,33 @@ const navegate = useNavigate()
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundColor: "#000", // fallback para fundo escuro
         minHeight: "100dvh"
       }}
     >
-      <div className="container align-content-center mb-5">
-        <div className="row det justify-content-center">
-          <div className="card info">
-            <div className="card-body text-center">
-              <h5 className="card-title" style={{ color: "#E6A003" }}>{movies.title}</h5>
+  
+          <div className="position-relative container-info">
+            
+
+           <img id='poster' style={{ borderRadius:"10px"}} src={ imageLoaded ? `https://image.tmdb.org/t/p/w1280${movies.poster_path}` : 'none'} alt="foto" />
+                          <button  style={{backgroundColor:"red"}} className="   exit  text-light ms-auto me-auto " onClick={handleGoBack}>
+                X
+              </button>
+            <div className='info'> 
+              
+              <h5 id='title' style={{ color: "#f0d08b" }}>{movies.title}</h5>
               <p className="card-text text-white">{movies.overview}</p>
-              <Rating
+
+              <p><span style={{ color: "#f0d08b" }}>Country</span>: {renderCountries()}</p>
+              <p><span style={{ color: "#f0d08b" }}>Genres</span>: {renderGenres()}</p>
+                  <Rating 
+                className='stars'
                 name="half-rating-read"
                 value={movies.vote_average / 2}
                 readOnly
               />
-              <p><span style={{ color: "#E6A003" }}>Country</span>: {renderCountries()}</p>
-              <p><span style={{ color: "#E6A003" }}>Genres</span>: {renderGenres()}</p>
-
-              <button className="btn btn-warning" onClick={handleGoBack}>
-                Back to Home
-              </button>
-            </div>
-          </div>
+              </div>
         </div>
-      </div>
+      
     </div>
   );
 }

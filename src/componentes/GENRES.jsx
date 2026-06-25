@@ -1,14 +1,17 @@
 import HEADER from "./HEADER";
 import { useEffect, useState } from "react";
 import { useParams, useNavigate} from "react-router-dom";
+import Pagination from 'react-bootstrap/Pagination';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { PageItem } from "react-bootstrap";
+import { Rating } from '@mui/material';
 
 function GENRES() {
   const [movie, setMovie] = useState([]);
   const { id } = useParams();
    const [loader, setloader] = useState(true)
   const navigate = useNavigate()
-
+  
    function handleGoToDetails(id) {
     sessionStorage.setItem("scrollPosition", window.scrollY);
     navigate(`/Details/${id}`);
@@ -22,6 +25,7 @@ function GENRES() {
       )
         .then((data) => data.json())
         .then((data) => setMovie(data.results));
+      
        
       }catch(error){
       console.log(error)
@@ -48,9 +52,9 @@ function GENRES() {
   if(loader){
 
     return  <div className='bg-black min-vh-100 d-flex justify-content-center align-items-center '> 
-     <div class=" mt-auto mb-auto spinner-border  text-warning" role="status">
-    <span class="visually-hidden ">Loading...</span>
-    </div>
+            <div className=" text-warning" >
+          <span >Loading...</span>
+        </div>
     </div>
       }
 
@@ -62,23 +66,27 @@ function GENRES() {
        <HEADER/>
         <div className="row m-auto">
        
-          {movie.map((element) => {
+          {movie.map((movie) => {
             return (
-              <div key={element.id} className="  col-md-6 col-lg-4 col-xl-3 col-xxl-2  ">
+                <div key={movie.id} className=" col-6 col-sm-4 col-md-4 col-lg-4 col-xl-3 col-xxl-2 ">
      
                 <div style={{backgroundColor:"rgb(0, 0, 0)"}} className="card img-fluid justify-content-center text-center anime">
-                <img style={{cursor:"pointer"}} onClick={()=> handleGoToDetails(element.id)} src={`https://image.tmdb.org/t/p/w500${element.poster_path}`} 
+                <img style={{cursor:"pointer"}} onClick={()=> handleGoToDetails(movie.id)} src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} 
                 className="movie divimg card-img-top im-g-fluid" alt="" /> 
                   <div className="card-body card-space ">
-                    <h5 className="card-title text-white">{element.title}</h5>
-                    <p className="card-text position-relative"> </p>
-               
+                    <h5 className="card-title text-white">{movie.title}</h5>
+                      <Rating               name="half-rating-read"
+                value={movie.vote_average / 2}
+                readOnly />
+                  
                   </div>
                 </div>
               </div>
+            
             );
           })}
         </div>
+       
       </div>
       
       </>

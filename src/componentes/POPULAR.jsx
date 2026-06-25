@@ -8,6 +8,7 @@ import two from "../assets/two.png"
 import three from "../assets/three.jpg"
 import { GrNext } from "react-icons/gr";
 import { GrPrevious } from "react-icons/gr";
+import { Rating } from '@mui/material';
 
 
 function Popular() {
@@ -28,6 +29,8 @@ function Popular() {
         const response = await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${import.meta.env.VITE_API_KEY}`);
         const data = await response.json();
         setMovies(data.results);
+      
+       
       } catch (error) {
         console.error("Erro ao buscar filmes:", error);
       } finally {
@@ -51,12 +54,13 @@ function Popular() {
   if (loader) {
     return (
       <div className='bg-black min-vh-100 d-flex justify-content-center align-items-center'>
-        <div className="spinner-border text-warning" role="status">
-          <span className="visually-hidden">Loading...</span>
+         <div className="text-warning" >
+          <span >Loading...</span>
         </div>
       </div>
     );
   }
+      
 
 
   return (
@@ -100,17 +104,26 @@ function Popular() {
         </Carousel>
         <div className=" row m-auto mt-5">
           {movie.map((movie) => (
-            <div key={movie.id} className="col-md-6 col-lg-4 col-xl-3 col-xxl-2 ">
+            <div key={movie.id} className=" col-6 col-sm-4 col-md-4 col-lg-4 col-xl-3 col-xxl-2 ">
               <div className=" movie card text-center anime" style={{ backgroundColor: "rgb(0, 0, 0)" }}>
+                
+                
                 <img
                   onClick={() => handleGoToDetails(movie.id)}
                   src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                   className="card-img-top  divimg img-fluid"
-                  alt={movie.title}
+                  alt={movie.title}  
                   style={{cursor:"pointer"}}
                 />
-                <div className="card-body">
-                  <h5 className="card-title text-white">{movie.title}</h5>
+                    
+
+                <div className="  card-body ">
+                  <h5 className="card-title  text-white">{movie.title}</h5>
+                         <Rating 
+                name="half-rating-read"
+                value={movie.vote_average / 2}
+                readOnly
+              />
                 </div>
               </div>
             </div>

@@ -1,44 +1,8 @@
 * {
   margin: 0px;
-  padding: 0px;}
-
-:root{
-background-color: black !important;
+  padding: 0px;
 }
 
-.carousel-indicators [data-bs-target] {
-  background-color: rgb(0, 0, 0) !important;
-  width: 16px !important;
-  height: 16px !important;
-  border-radius: 50%;
-}
-
-.carousel-indicators .active {
-  background-color: #FFC107 !important;
-}
-
-.carousel-control-prev{
-
-  font-size: 30px !important;
-
-}
-
-.carousel-control-next{
-  font-size: 30px !important;
-}
-
-input:focus {
-  outline: none;
-}
-
-#mobilediv{
-width: 32%;
-}
-
-input {
-  background-color: rgb(32, 30, 30) !important;
-  width: 200px;
-}
 
 @keyframes animations {
   from {
@@ -51,35 +15,115 @@ input {
   }
 }
 
+:root {
+  background-color: black !important;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: rgb(0, 0, 0) !important;
+  width: 16px !important;
+  height: 16px !important;
+  border-radius: 50%;
+}
+
+.carousel-indicators .active {
+  background-color: #FFCA2C !important;
+}
+
+.carousel-control-prev {
+  font-size: 30px !important;
+}
+
+.carousel-control-next {
+  font-size: 30px !important;
+}
+
+input:focus {
+  outline: none;
+}
+
+#poster {
+  width: 300px;
+}
+
+.collapse {
+display: flex;
+justify-content: space-around;}
+
+input {
+  background-color: rgb(32, 30, 30) !important;
+}
+
+.exit {
+  left: calc(100% - 20px);
+  top: -10px;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  border-radius: 50%;
+}
+
 #movie {
   width: 30px;
   position: relative;
 }
 
-#searchimg {
+#searching {
   width: 20px;
+  margin-bottom: 10px;
 }
 
-#search {
-  width: 50px !important;
+#search-icon{
+height:30px;
+margin-bottom: 3px;
+
 }
 
-.gold{
-color: gold;
+input{
+width: 150px;
+height: 30px;
+border-radius: 5px;
 }
 
+
+#search-icon-mobile{
+  width: 20px;
+  
+}
+
+#searching-mobile {
+  width: 50px;
+}
+
+#input-mobile{
+ width: calc(100%) ;
+height: 40px;
+border-radius: 5px;
+}
+
+.gold {
+  color: gold;
+}
+
+.container-info {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  padding: 10px;
+  max-width: 900px;
+  opacity: 0.9;
+  display: flex;
+  margin: auto;
+  height: 400px;
+}
 
 .info {
-  background-color: rgba(0, 0, 0, 0.4) !important;
-  color: rgb(255, 255, 255) !important;
-  font-weight: bold !important;
-  padding: 20px !important;
-  text-align: center !important;
-  width: 890px !important;
-}
-
-.det {
-  opacity: 0.9;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 5px;
 }
 
 .card-space {
@@ -90,58 +134,103 @@ color: gold;
   background-position: center;
 }
 
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar{
+background-color: black;
+}
+
 
 a {
   cursor: pointer;
 }
 
-@media screen and (width >  992px) {
+@media screen and (width > 992px) {
+
+
   .movie:hover {
-    transform: translateY(-50px);
-    transition: transform 0.4s
+    transform: translateY(-20px);
+
   }
 
   .anime {
     animation: animations;
     animation-timeline: view();
   }
-  .navbar{
-  background-color: rgb(0, 0, 0,0.8);
-  }
+
+ 
 }
 
 @media screen and (width < 992px) {
-
- .imgcarrossel{
-height: 300px !important;
+  
+  input {
+    display: 100px ;
   }
 
- .navbar {
+  .imgcarrossel {
+    height: 300px !important;
+  }}
 
-  background-color: rgb(0, 0, 0,0) ;
-  height: 40px;
-  display: flex;
-  align-items: center !important;
-  margin: 0px !important;
- padding: 0px !important;
-}
- #mobilediv{
- width: 100%;
- background-color: rgb(0, 0, 0,0);
- justify-content: center;
-}
+@media screen and (width < 950px) {
 
-.divimg{
-height: 400px !important;
-}
+  .container-info {
+    height: 350px;
+    width: 600px;
+    font-size: 12px;
+  }
 
+  .info {
+    height: 340px;
+  }
 
-input{
-width: 99%;
-}
-
+  .exit {
+    left: calc(100% - 23px);
+    bottom: calc(100% - 20px);
+  }
 
 }
 
+@media screen and (width < 576px) {
 
+  .container-info {
+    height: 600px;
+    width: 250px;
+    font-size: 12px;
+    flex-direction: column;
+    text-align: center;
+  }
 
+  #poster {
+    height: 200px;
+    width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .exit {
+    left: calc(100% - 20px);
+    position: absolute;
+  }
+
+  .info {
+    justify-content: center;
+    margin-left: 0px;
+  }
+
+  #title {
+    margin-top: 50px;
+  }
+
+  .stars {
+    margin: 10px auto;
+  }
+  #mobilediv{
+  display: block;
+  }
+
+}
